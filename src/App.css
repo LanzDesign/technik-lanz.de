@@ -1,0 +1,38 @@
+/* Grundlegendes Layout für die gesamte Anwendung */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background:  url("./assets/hero-picture.png");
+}
+
+/* Die Hauptinhalte füllen den verfügbaren Platz zwischen Header und Footer */
+.main-content {
+
+  flex: 1;
+  padding: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Fußzeile */
+.footer {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+    max-width: 100%;
+  }
+}
