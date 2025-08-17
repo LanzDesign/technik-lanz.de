@@ -82,7 +82,9 @@
   .hero h1 {
     font-size: 1.5rem;
   }
-
+  .logo-hero {
+    max-width: 60vw;
+  }
   .hero p {
     font-size: 0.95rem;
   }

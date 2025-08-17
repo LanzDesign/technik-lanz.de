@@ -53,6 +53,12 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  .footer-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .main-content {
     padding: 1rem;
     max-width: 100%;
