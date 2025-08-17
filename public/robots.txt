@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://technik-lanz.de/sitemap.xml
+Sitemap: https://www.technik-lanz.de/sitemap.xml
