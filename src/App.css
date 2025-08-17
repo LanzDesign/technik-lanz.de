@@ -7,6 +7,28 @@
   background:  url("./assets/hero-picture.png");
 }
 
+.footer-grid {
+  text-align: center;
+  justify-content: center;
+  justify-content: center;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto auto auto auto;
+}
+
+.circle-div {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  text-align: center;
+}
+.circle {
+  margin: 10px;
+  width: 5px;
+  height: 5px;
+  background-color: var(--accent-color);
+}
 /* Die Hauptinhalte füllen den verfügbaren Platz zwischen Header und Footer */
 .main-content {
 

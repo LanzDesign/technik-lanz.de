@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
-import logoImage from '../assets/logo_greyscale.png';
+import logoImage from '../assets/logo.png';
 
 /**
  * Kopfzeile mit Navigation. Die Logo‑Platzhalter kann von

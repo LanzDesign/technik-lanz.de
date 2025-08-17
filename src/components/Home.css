@@ -6,7 +6,9 @@
   text-align: center;
   padding: 4rem 1rem;
 }
-
+.logo-hero {
+  max-width: 30rem;
+}
 .hero h1 {
   font-size: 2.25rem;
   margin-bottom: 1rem;
