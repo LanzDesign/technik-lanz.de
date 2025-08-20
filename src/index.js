@@ -1,7 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
+import TechnikLanzApp from './TechnikLanzApp';
 import './root.css';
 
 // Find the root element and render the React application.
@@ -9,8 +8,6 @@ const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <TechnikLanzApp />
   </React.StrictMode>
 );
