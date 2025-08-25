@@ -10,6 +10,8 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "@sanity/client": "^7.9.0",
+    "@sanity/image-url": "^1.1.0",
     "ajv": "^8.17.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
