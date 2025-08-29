@@ -4,7 +4,9 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  
   background:  url("./assets/hero-picture.png");
+  background-position: center;
 }
 
 .footer-grid {
