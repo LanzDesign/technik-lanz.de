@@ -10,10 +10,9 @@ const Home = () => {
     <section className="home">
       <div className="hero">
         <img src={logoImage} alt="Technik‑Lanz Logo" className="logo-hero" />
-        <h1>Ihr persönlicher IT‑Dienstleister</h1>
+        <h1>Wo Technik auf Design trifft</h1>
         <p>
-          Wir unterstützen kleine Unternehmen mit maßgeschneiderten IT‑Lösungen.
-          Als Nebengewerbe bieten wir flexible Services zu fairen Konditionen.
+          Wir bringen kleine Unternehmen online: mit modernen, maßgeschneiderten Webseiten, die flexibel betreut und zu fairen Preisen realisiert werden.
         </p>
         <div className="cta-buttons">
           <Link to="/services" className="btn primary">
