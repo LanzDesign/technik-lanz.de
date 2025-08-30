@@ -1,18 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
-/**
- * Kontaktseite mit einfachem Formular. Das Formular sendet aktuell keine Daten,
- * sondern dient als Beispiel. Für eine funktionierende Lösung kann später
- * ein Backend oder ein Drittanbieter‑Service integriert werden.
- */
 const Contact = () => {
+  const form = useRef();
   const [status, setStatus] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Einfacher Feedback‑Mechanismus, der die Eingaben momentan nicht speichert.
-    setStatus('Vielen Dank für Ihre Nachricht! Wir melden uns zeitnah bei Ihnen.');
+
+    emailjs
+      .sendForm(
+        'service_9k2c3gd',   // z.B. "service_xxx"
+        'template_7tx1g8m',  // z.B. "template_xxx"
+        form.current,
+        'b_iYiIOmnKTMwo9V3'    // z.B. "abcd1234..."
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setStatus('Vielen Dank für Ihre Nachricht! Wir melden uns zeitnah bei Ihnen.');
+          form.current.reset();
+        },
+        (error) => {
+          console.log(error.text);
+          setStatus('Es gab ein Problem beim Versenden. Bitte versuchen Sie es später erneut.');
+        }
+      );
   };
 
   return (
@@ -20,17 +34,18 @@ const Contact = () => {
       <h2>Kontakt</h2>
       <p>Haben Sie Fragen oder wünschen ein unverbindliches Angebot? Schreiben Sie uns!</p>
       <div className="contact-details">
-        <p>E‑Mail: <a href="mailto:info@technik-lanz.de">info@technik‑lanz.de</a></p>
-        {/* Hier können bei Bedarf weitere Kontaktmöglichkeiten wie Telefonnummer eingefügt werden */}
+        <p>
+          E-Mail: <a href="mailto:info@technik-lanz.de">info@technik-lanz.de</a>
+        </p>
       </div>
-      <form className="contact-form" onSubmit={handleSubmit}>
+      <form ref={form} className="contact-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name</label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" id="name" name="user_name" required />
         </div>
         <div className="form-group">
-          <label htmlFor="email">E‑Mail</label>
-          <input type="email" id="email" name="email" required />
+          <label htmlFor="email">E-Mail</label>
+          <input type="email" id="email" name="user_email" required />
         </div>
         <div className="form-group">
           <label htmlFor="message">Nachricht</label>
