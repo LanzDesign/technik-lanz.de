@@ -15,10 +15,10 @@ const Home = () => {
           Wir bringen kleine Unternehmen online: mit modernen, maßgeschneiderten Webseiten, die flexibel betreut und zu fairen Preisen realisiert werden.
         </p>
         <div className="cta-buttons">
-          <Link to="/services" className="btn primary">
+          <Link to="/services" className="glowing-btn">
             Leistungen entdecken
           </Link>
-          <Link to="/contact" className="btn secondary">
+          <Link to="/contact" className="glowing-btn">
             Kontakt aufnehmen
           </Link>
         </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
-import logoImage from '../assets/logo.png';
+import logoImage from '../assets/logo-no-text.png';
 
 /**
  * Kopfzeile mit Navigation. Die Logo‑Platzhalter kann von
@@ -19,7 +19,10 @@ const Header = () => {
     <header className="header">
       <div className="brand">
         {/* Logo */}
-        <img src={logoImage} alt="Technik‑Lanz Logo" className="logo-image" />
+        <NavLink to="/" end className={"logo-navbar"} onClick={() => setMenuOpen(false)}>
+          <img src={logoImage} alt="Technik‑Lanz Logo" className="logo-image" />
+        </NavLink>
+        
       </div>
       {/* Toggle‑Button für kleine Displays */}
       <button

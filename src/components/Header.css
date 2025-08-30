@@ -6,9 +6,15 @@
   padding: 1rem 2rem;
   background-color: var(--primary-color);
   color: var(--text-white);
-  
 }
 
+.logo-navbar{
+
+}
+
+.logo-navbar:hover{
+  background-color: #ff212169;
+}
 /* Branding-Bereich */
 .brand {
   display: flex;
