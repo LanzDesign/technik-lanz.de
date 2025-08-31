@@ -31,7 +31,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} Technik‑Lanz&nbsp;&ndash;&nbsp;IT‑Dienstleistungen für Unternehmen.</p>
+        <p>&copy; {new Date().getFullYear()} Technik‑Lanz&nbsp;&ndash;&nbsp;Webentwickler</p>
         
         <div className='circle-div'>
           <div className='circle'></div>

@@ -48,6 +48,12 @@ const Header = () => {
           Kontakt
         </NavLink>
       </nav>
+      <div className="brand">
+        {/* Logo */}
+        <NavLink to="/" end className={"logo-navbar"} onClick={() => setMenuOpen(false)}>
+          <img src={logoImage} alt="Technik‑Lanz Logo" className="logo-image" />
+        </NavLink>
+      </div>
     </header>
   );
 };

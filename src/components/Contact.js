@@ -51,7 +51,7 @@ const Contact = () => {
           <label htmlFor="message">Nachricht</label>
           <textarea id="message" name="message" rows="5" required></textarea>
         </div>
-        <button type="submit" className="btn primary">Absenden</button>
+        <button type="submit" className="glowing-btn submit-btn">Absenden</button>
         {status && <p className="status-message">{status}</p>}
       </form>
     </section>
