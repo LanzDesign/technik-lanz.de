@@ -12,7 +12,7 @@ const Home = () => {
       <div className="hero">
         <img src={logoImage} alt="Technik‑Lanz Logo" className="logo-hero" />
 
-    <section className="h-screen flex items-center justify-center bg-gray-900 text-white">
+    <section className="typed-shadow">
       <h1 className="text-4xl md:text-6xl font-bold text-center">
         <ReactTyped
           strings={[
@@ -21,7 +21,7 @@ const Home = () => {
           typeSpeed={80}
         />
       </h1>
-        <h1 className="text-4xl md:text-6xl font-bold text-center">
+        <h1 className="typed-shadow">
         <ReactTyped
           strings={[
             "Ich entwickle moderne React-Anwendungen."
@@ -29,7 +29,7 @@ const Home = () => {
           typeSpeed={80}
         />
       </h1>
-      <h1 className="text-4xl md:text-6xl font-bold text-center">
+      <h1 className="typed-shadow">
         <ReactTyped
           strings={[
             "Maßgeschneiderte IT-Lösungen für dich."
