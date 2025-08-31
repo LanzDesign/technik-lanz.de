@@ -41,14 +41,19 @@
 
 .form-group input,
 .form-group textarea {
-  width: 100%;
+  width: 100%;              /* volle Breite nutzen */
+  max-width: 600px;         /* Begrenzung für große Bildschirme */
+  margin: 0 auto;           /* mittig zentrieren */
   padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
   font-size: 1rem;
   font-family: inherit;
+  box-sizing: border-box; 
 }
-
+.glowing-btn{
+  justify-self: center;
+  align-self: center;
+  max-width: 600px;
+}
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
@@ -66,6 +71,12 @@
 @media (max-width: 768px) {
   .contact {
     padding: 0 1rem;
+  }
+  .form-group textarea {
+    max-width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-family: inherit;
   }
 }
 

@@ -32,7 +32,7 @@ const Contact = () => {
   return (
     <section className="contact">
       <h2>Kontakt</h2>
-      <p>Haben Sie Fragen oder wünschen ein unverbindliches Angebot? Schreiben Sie uns!</p>
+      <p>Haben Sie Fragen oder wünschen ein unverbindliches Angebot? Schreiben Sie mir!</p>
       <div className="contact-details">
         <p>
           E-Mail: <a href="mailto:info@technik-lanz.de">info@technik-lanz.de</a>
