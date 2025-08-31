@@ -22,8 +22,8 @@ const Header = () => {
         <NavLink to="/" end className={"logo-navbar"} onClick={() => setMenuOpen(false)}>
           <img src={logoImage} alt="Technik‑Lanz Logo" className="logo-image" />
         </NavLink>
-        
       </div>
+      
       {/* Toggle‑Button für kleine Displays */}
       <button
         className={`menu-toggle${menuOpen ? ' open' : ''}`}
