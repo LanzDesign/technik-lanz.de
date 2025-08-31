@@ -28,10 +28,9 @@ const Services = () => {
 
   return (
     <section className="services">
-      <h2>Unsere Leistungen</h2>
+      <h2>Meine Leistungen</h2>
       <p>
-        Als kleiner IT-Dienstleister im Nebengewerbe bieten wir Ihnen ein breites
-        Spektrum an Services für Ihr Business.
+        Wir bauen und betreuen performante Webseiten – responsiv, DSGVO-konform und leicht zu pflegen.
       </p>
 
       {error && (
@@ -52,8 +51,14 @@ const Services = () => {
         <div className="service-list">
           {services.map((service) => (
             <div className="service-item" key={service._id}>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
+              <br/>
+                <div className='service-h3-bg'>
+                  <h3>{service.title}</h3>
+                </div>
+              <br/>
+                <div className='service-p-bg'>
+                  <p>{service.description}</p>
+                </div>
             </div>
           ))}
         </div>

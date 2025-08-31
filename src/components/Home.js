@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 import logoImage from '../assets/logo.png';
 import { ReactTyped } from "react-typed";
+
+import Services from './Services';
+import About from './About';
+import Contact from './Contact';
 /**
  * Startseite mit einem einladenden Intro und Schwerpunkt auf kleine Unternehmen.
  */
@@ -13,7 +17,7 @@ const Home = () => {
         <img src={logoImage} alt="Technik‑Lanz Logo" className="logo-hero" />
 
     <section className="typed-shadow">
-      <h1 className="text-4xl md:text-6xl font-bold text-center">
+      <h1 className="typed">
         <ReactTyped
           strings={[
             "Willkommen bei meiner Webseite.",           
@@ -21,7 +25,7 @@ const Home = () => {
           typeSpeed={80}
         />
       </h1>
-        <h1 className="typed-shadow">
+        <h1 className="typed">
         <ReactTyped
           strings={[
             "Ich entwickle moderne React-Anwendungen."
@@ -29,7 +33,7 @@ const Home = () => {
           typeSpeed={80}
         />
       </h1>
-      <h1 className="typed-shadow">
+      <h1 className="typed">
         <ReactTyped
           strings={[
             "Maßgeschneiderte IT-Lösungen für dich."

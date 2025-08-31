@@ -3,15 +3,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
+  top: 10px;
   gap: 20px;
   color: var(--text-white);
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
 }
 
 
 .logo-navbar:hover{
-  -webkit-filter: drop-shadow(0 0 9px #ff2121);
-  filter: drop-shadow(0 0 9px #ff2121);
+  -webkit-filter: drop-shadow(0 0 9px #ff212100);
+  filter: drop-shadow(0 0 9px #ff212100);
+  text-decoration: underline;
+    text-decoration: underline;
+  text-underline-offset: 0px;   /* Abstand zur Schrift */
+  text-decoration-thickness: 0px;
 }
 /* Branding-Bereich */
 
@@ -23,7 +30,7 @@
 /* Navigation */
 .nav {
   box-shadow: 0 0 20px #ff2121;
-  border: 2px solid var(--accent-color);
+  border: 1px solid var(--accent-color);
   margin-top: 5px;
   display: flex;
   gap: 1.5rem;
@@ -32,11 +39,13 @@
   border-radius: 50px;
   font-size: large;
   margin-top: 15px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .nav-link {
   color: var(--text-white);
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
   padding-bottom: 0.25rem;
 }
@@ -59,6 +68,10 @@
   .logo-image {
     display: none;
   }
+  .nav{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 /* Menü‑Toggle (Hamburger) */
@@ -74,6 +87,7 @@
   cursor: pointer;
   padding: 0;
   margin-left: auto;
+  margin-right: 30px;
 }
 
 .menu-toggle .bar {
@@ -81,6 +95,7 @@
   height: 3px;
   background-color: var(--accent-color);
   margin: 3px 0;
+  z-index: 9999;
 }
 
 /* Burger‑Animation */
@@ -108,20 +123,22 @@
   .menu-toggle {
     display: flex;
   }
-
   /* Navigation standardmäßig verstecken */
   .nav {
-    z-index: 1000;
+    z-index: 100;
     display: none;
     justify-self: center;
     flex-direction: column;
     align-items: center;
-    width: 90%;
-    margin-top: 1rem;
+    align-self: center;
     gap: 0.5rem;
     font-size: x-large;
+    border-radius: 20px;
+    position: absolute;
+    top: 10px;
+    width: 80%;
+    margin-top: 0;
   }
-
   /* Navigation anzeigen, wenn geöffnet */
   .nav.open {
     display: flex;

@@ -1,5 +1,6 @@
 /* Stil für die Über‑uns‑Seite */
 .about {
+  margin-top: 180px;
   text-align: center;
 }
 
@@ -23,6 +24,7 @@
 @media (max-width: 768px) {
   .about {
     padding: 0 1rem;
+    margin-top: 0;
   }
 }
 

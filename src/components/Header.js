@@ -17,6 +17,7 @@ const Header = () => {
 
   return (
     <header className="header">
+
       <div className="brand">
         {/* Logo */}
         <NavLink to="/" end className={"logo-navbar"} onClick={() => setMenuOpen(false)}>
