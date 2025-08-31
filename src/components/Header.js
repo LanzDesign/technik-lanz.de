@@ -34,7 +34,8 @@ const Header = () => {
         <span className="bar"></span>
         <span className="bar"></span>
       </button>
-      <nav className={`nav${menuOpen ? ' open' : ''}`}>
+      <div className='runner'>
+      <nav className={`nav${menuOpen ? ' open' : ''} content`}>
         <NavLink to="/" end className="nav-link" onClick={() => setMenuOpen(false)}>
           Startseite
         </NavLink>
@@ -42,12 +43,13 @@ const Header = () => {
           Leistungen
         </NavLink>
         <NavLink to="/about" className="nav-link" onClick={() => setMenuOpen(false)}>
-          Über&nbsp;uns
+          Über&nbsp;mich
         </NavLink>
         <NavLink to="/contact" className="nav-link" onClick={() => setMenuOpen(false)}>
           Kontakt
         </NavLink>
       </nav>
+      </div>
       <div className="brand">
         {/* Logo */}
         <NavLink to="/" end className={"logo-navbar"} onClick={() => setMenuOpen(false)}>
