@@ -16,32 +16,29 @@ const Home = () => {
       <div className="hero">
         <img src={logoImage} alt="Technik‑Lanz Logo" className="logo-hero" />
 
-    <section className="typed-shadow">
-      <h1 className="typed">
-        <ReactTyped
-          strings={[
-            "Willkommen bei meiner Webseite.",           
-          ]}
-          typeSpeed={80}
-        />
-      </h1>
-        <h1 className="typed">
-        <ReactTyped
-          strings={[
-            "Ich entwickle moderne React-Anwendungen."
-          ]}
-          typeSpeed={80}
-        />
-      </h1>
-      <h1 className="typed">
-        <ReactTyped
-          strings={[
-            "Maßgeschneiderte IT-Lösungen für dich."
-          ]}
-          typeSpeed={80}
-        />
-      </h1>
-    </section>
+<section className="typed-shadow">
+  <h1 className='typed'>
+   <ReactTyped
+      strings={[
+        "Hallo ich heiße <span className='red'>Daniel Lanz</span>"
+      ]}
+      typeSpeed={80}
+      showCursor={false}
+    />
+  </h1>
+
+
+
+  <h1 className="typed">
+    <ReactTyped
+      strings={[
+        "Willkommen bei meiner Webseite.<br/>Ich entwickle moderne React-Anwendungen.<br/>Maßgeschneiderte IT-Lösungen für dich."
+      ]}
+      typeSpeed={80}
+      showCursor={false}
+    />
+  </h1>
+</section>
     <br/>
         <p>
           „Moderne, individuelle Webseiten – professionell entwickelt, flexibel betreut und zu fairen Konditionen realisiert.“
