@@ -20,7 +20,14 @@
 
   --text-white: #ffffff;
 }
-
+::selection{
+  background-color: #ff212130;
+  color: white;
+}
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #ff212130;
+}
 @font-face {
   font-family: 'century';
   src: url(./assets/centurygothic.ttf);
