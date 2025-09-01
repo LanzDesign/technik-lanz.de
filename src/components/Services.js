@@ -30,7 +30,7 @@ const Services = () => {
     <section className="services">
       <h2>Meine Leistungen</h2>
       <p>
-        Wir bauen und betreuen performante Webseiten – responsiv, DSGVO-konform und leicht zu pflegen.
+        Ich baue und betreue performante Webseiten – responsiv, DSGVO-konform und leicht zu pflegen.
       </p>
 
       {error && (
