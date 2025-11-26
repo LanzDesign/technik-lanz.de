@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Accessibility.css";
+import { MdAccessibility } from "react-icons/md";
+import { IoMdClose } from "react-icons/io";
 
 const Accessibility = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -104,7 +106,7 @@ const Accessibility = () => {
           top: "auto",
         }}
       >
-        ♿
+        <MdAccessibility />
       </button>
 
       {isOpen && (
@@ -116,7 +118,7 @@ const Accessibility = () => {
               onClick={togglePanel}
               aria-label="Panel schließen"
             >
-              ✕
+              <IoMdClose />
             </button>
           </div>
 

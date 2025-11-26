@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./CookieSettings.css";
+import { FaCookie } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
 
 const CookieSettings = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,7 +46,7 @@ const CookieSettings = () => {
           top: "auto",
         }}
       >
-        🍪
+        <FaCookie />
       </button>
 
       {isOpen && (
@@ -56,7 +58,7 @@ const CookieSettings = () => {
               onClick={togglePanel}
               aria-label="Panel schließen"
             >
-              ✕
+              <IoMdClose />
             </button>
           </div>
 

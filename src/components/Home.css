@@ -276,12 +276,13 @@
   transform: translateX(-50%);
   animation: bounce 2s infinite;
   cursor: pointer;
+  font-size: 2rem;
+  color: var(--accent-color);
+  filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.8));
 }
 
 .scroll-indicator::before {
   content: "↓";
-  font-size: 2rem;
-  color: var(--accent-color);
   display: block;
   text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
 }

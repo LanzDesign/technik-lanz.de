@@ -6,7 +6,9 @@ import Projects from "./Projects";
 import Services from "./Services";
 import About from "./About";
 import Contact from "./Contact";
+import FAQ from "./FAQ";
 import { Helmet } from "react-helmet";
+import { FaArrowDown } from "react-icons/fa";
 
 const Home = () => {
   const scrollToProjects = () => {
@@ -108,13 +110,13 @@ const Home = () => {
             </div>
           </div>
         </div>
-
-        <div className="scroll-indicator" onClick={scrollToProjects} />
+        <div className="scroll-indicator" onClick={scrollToProjects}></div>
       </section>
 
       <Projects />
       <Services />
       <About />
+      <FAQ />
       <Contact />
     </>
   );

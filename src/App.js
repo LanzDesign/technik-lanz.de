@@ -11,6 +11,8 @@ import logoImage from "./assets/logo.png";
 import CookieBanner from "./components/CookieBanner";
 import CookieSettings from "./components/CookieSettings";
 import Accessibility from "./components/Accessibility";
+import ThemeToggle from "./components/ThemeToggle";
+import { FaGithub, FaLinkedin, FaEnvelope, FaArrowUp } from "react-icons/fa";
 
 /**
  * Die Hauptanwendung definiert die Navigation und das Layout der Seite.
@@ -27,6 +29,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <ThemeToggle />
       <Accessibility />
       <CookieSettings />
       <main className="main-content">
@@ -60,7 +63,7 @@ function App() {
                   rel="noopener noreferrer"
                   className="footer-social-link"
                 >
-                  💻
+                  <FaGithub />
                 </a>
                 <a
                   href="https://linkedin.com/in/yourusername"
@@ -68,13 +71,13 @@ function App() {
                   rel="noopener noreferrer"
                   className="footer-social-link"
                 >
-                  💼
+                  <FaLinkedin />
                 </a>
                 <a
                   href="mailto:info@technik-lanz.de"
                   className="footer-social-link"
                 >
-                  ✉️
+                  <FaEnvelope />
                 </a>
               </div>
             </div>
@@ -153,7 +156,9 @@ function App() {
             </p>
 
             <button className="scroll-to-top-btn" onClick={scrollToTop}>
-              <span className="scroll-icon">↑</span>
+              <span className="scroll-icon">
+                <FaArrowUp />
+              </span>
               <span>Scroll to Top</span>
             </button>
 
