@@ -46,7 +46,7 @@ const About = () => {
           <div className="about-image-wrapper">
             <img
               src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80"
-              alt="Workspace"
+              alt="Webentwickler Workspace Offenburg"
               className="about-image"
             />
           </div>
@@ -54,21 +54,22 @@ const About = () => {
           <div className="about-text">
             <h2 className="about-title">Über mich</h2>
             <p className="about-subtitle">
-              Webentwickler & Full-Stack Developer
+              Webentwickler & Full-Stack Developer in Offenburg, Lahr & Ortenau
             </p>
 
             <p className="about-description">
               Hallo! Ich bin Daniel Lanz, ein leidenschaftlicher Webentwickler
-              mit Fokus auf moderne Webtechnologien. Seit über 3 Jahren
+              aus der Region Offenburg, Lahr und Ortenau. Seit über 3 Jahren
               entwickle ich maßgeschneiderte digitale Lösungen für Unternehmen
-              und Privatpersonen.
+              und Privatpersonen in Baden-Württemberg.
             </p>
 
             <p className="about-description">
               Meine Expertise liegt in der Entwicklung von performanten
-              React-Anwendungen und komplexen Full-Stack-Projekten. Ich liebe
-              es, innovative Ideen in funktionale, benutzerfreundliche Websites
-              zu verwandeln.
+              React-Anwendungen und komplexen Full-Stack-Projekten. Als
+              Webentwickler in Offenburg, Lahr und der Ortenau liebe ich es,
+              innovative Ideen in funktionale, benutzerfreundliche Websites zu
+              verwandeln.
             </p>
 
             <div className="about-highlight">
@@ -80,10 +81,10 @@ const About = () => {
             </div>
 
             <p className="about-description">
-              Von der ersten Idee bis zum fertigen Produkt begleite ich dich
-              durch den gesamten Entwicklungsprozess. Dabei setze ich auf
-              transparente Kommunikation, agile Methoden und modernste
-              Technologien.
+              Von der ersten Idee bis zum fertigen Produkt begleite ich Kunden
+              aus Offenburg, Lahr, der Ortenau und ganz Baden-Württemberg durch
+              den gesamten Entwicklungsprozess. Dabei setze ich auf transparente
+              Kommunikation, agile Methoden und modernste Technologien.
             </p>
           </div>
         </div>

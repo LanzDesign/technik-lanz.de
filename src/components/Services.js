@@ -13,26 +13,13 @@ const query = `*[_type == "services" && defined(title) && defined(description)]
   }`;
 
 const Services = () => {
-  const [services, setServices] = useState(null);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    client
-      .fetch(query)
-      .then((data) => setServices(data))
-      .catch((err) => {
-        console.error("Sanity error:", err);
-        setError(err.message || String(err));
-      });
-  }, []);
-
-  const localServices = [
+  const services = [
     {
       id: 1,
       icon: "🌐",
-      name: "Webentwicklung",
+      name: "Webentwicklung Offenburg",
       description:
-        "Moderne, responsive Websites mit React, Next.js und den neuesten Technologien. Von der Landingpage bis zur komplexen Webanwendung.",
+        "Moderne, responsive Websites mit React, Next.js und den neuesten Technologien. Professionelle Webentwicklung für Unternehmen in Offenburg, Lahr und der Ortenau.",
       features: [
         "Responsive Design für alle Geräte",
         "SEO-optimiert",
@@ -48,7 +35,7 @@ const Services = () => {
       icon: "⚙️",
       name: "Fullstack-Entwicklung",
       description:
-        "Komplette Webanwendungen mit Frontend und Backend. Datenbanken, APIs, User-Management und individuelle Business-Logik.",
+        "Komplette Webanwendungen mit Frontend und Backend. Spezialisiert auf Django und React für Kunden in Offenburg, Lahr und Ortenaukreis.",
       features: [
         "Django/Node.js Backend",
         "PostgreSQL/MongoDB Datenbank",
@@ -156,55 +143,37 @@ const Services = () => {
     <section className="services-section" id="leistungen">
       <div className="services-container">
         <div className="services-header">
-          <h2 className="services-title">Meine Leistungen</h2>
+          <h2 className="services-title">
+            Webentwicklung in Offenburg, Lahr & Ortenau
+          </h2>
           <p className="services-subtitle">
             Von der ersten Idee bis zum fertigen Produkt – ich biete dir
-            umfassende Webentwicklungs-Dienstleistungen aus einer Hand.
+            umfassende Webentwicklungs-Dienstleistungen für die Region
+            Offenburg, Lahr und Ortenau.
           </p>
         </div>
 
         <div className="services-grid">
-          {services
-            ? services.map((service) => (
-                <div key={service._id} className="service-card">
-                  <span className="service-icon">{service.icon}</span>
-                  <h3 className="service-name">{service.title}</h3>
-                  <p className="service-description">{service.description}</p>
+          {services.map((service) => (
+            <div key={service.id} className="service-card">
+              <span className="service-icon">{service.icon}</span>
+              <h3 className="service-name">{service.name}</h3>
+              <p className="service-description">{service.description}</p>
 
-                  <ul className="service-features">
-                    {service.features?.map((feature, index) => (
-                      <li key={index}>{feature}</li>
-                    ))}
-                  </ul>
+              <ul className="service-features">
+                {service.features.map((feature, index) => (
+                  <li key={index}>{feature}</li>
+                ))}
+              </ul>
 
-                  <div className="service-price">{service.price}</div>
+              <div className="service-price">{service.price}</div>
 
-                  <a href={service.link} className="service-link">
-                    <span>Mehr erfahren</span>
-                    <span>→</span>
-                  </a>
-                </div>
-              ))
-            : localServices.map((service) => (
-                <div key={service.id} className="service-card">
-                  <span className="service-icon">{service.icon}</span>
-                  <h3 className="service-name">{service.name}</h3>
-                  <p className="service-description">{service.description}</p>
-
-                  <ul className="service-features">
-                    {service.features.map((feature, index) => (
-                      <li key={index}>{feature}</li>
-                    ))}
-                  </ul>
-
-                  <div className="service-price">{service.price}</div>
-
-                  <a href={service.link} className="service-link">
-                    <span>Mehr erfahren</span>
-                    <span>→</span>
-                  </a>
-                </div>
-              ))}
+              <a href={service.link} className="service-link">
+                <span>Mehr erfahren</span>
+                <span>→</span>
+              </a>
+            </div>
+          ))}
         </div>
 
         <div className="process-section">

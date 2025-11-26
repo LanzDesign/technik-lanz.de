@@ -29,10 +29,12 @@ const Contact = () => {
     <section className="contact-section" id="kontakt">
       <div className="contact-container">
         <div className="contact-header">
-          <h2 className="contact-title">Kontakt</h2>
+          <h2 className="contact-title">
+            Kontakt in Offenburg, Lahr & Ortenau
+          </h2>
           <p className="contact-subtitle">
-            Lass uns gemeinsam dein nächstes Projekt verwirklichen. Ich freue
-            mich auf deine Nachricht!
+            Lass uns gemeinsam dein nächstes Projekt in Offenburg, Lahr oder der
+            Ortenau verwirklichen. Ich freue mich auf deine Nachricht!
           </p>
         </div>
 
@@ -72,9 +74,25 @@ const Contact = () => {
               <span className="info-icon">📍</span>
               <h3 className="info-title">Standort</h3>
               <p className="info-text">
-                Deutschland
+                Offenburg, Lahr & Ortenau
+                <br />
+                Baden-Württemberg
                 <br />
                 Remote & vor Ort
+              </p>
+            </div>
+
+            <div className="info-card">
+              <span className="info-icon">🏢</span>
+              <h3 className="info-title">Servicebereich</h3>
+              <p className="info-text">
+                Offenburg, Lahr, Kehl, Achern,
+                <br />
+                Oberkirch, Gengenbach,
+                <br />
+                gesamter Ortenaukreis &
+                <br />
+                Baden-Württemberg
               </p>
             </div>
           </div>

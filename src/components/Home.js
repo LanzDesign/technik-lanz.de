@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 import logoImage from "../assets/logo.png";
 import { ReactTyped } from "react-typed";
@@ -6,17 +6,39 @@ import Projects from "./Projects";
 import Services from "./Services";
 import About from "./About";
 import Contact from "./Contact";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const scrollToProjects = () => {
     document.getElementById("projekte")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  useEffect(() => {
+    // Dynamische Meta-Tags für SEO
+    document.title =
+      "Webentwickler Offenburg, Lahr & Ortenau | React & Django | Technik-Lanz";
+  }, []);
+
   return (
     <>
+      <Helmet>
+        <meta
+          name="description"
+          content="Professionelle Webentwicklung in Offenburg, Lahr & Ortenau ✓ React & Django Entwickler ✓ Moderne Websites & Apps ✓ Full-Stack Development ✓ Jetzt unverbindlich anfragen!"
+        />
+        <meta
+          name="keywords"
+          content="Webentwickler Offenburg, Webentwicklung Lahr, Webdesign Ortenau, React Entwickler Offenburg, Django Entwickler Lahr"
+        />
+      </Helmet>
+
       <section className="home" id="home">
         <div className="hero">
-          <img src={logoImage} alt="Technik‑Lanz Logo" className="logo-hero" />
+          <img
+            src={logoImage}
+            alt="Technik-Lanz Logo - Webentwickler Offenburg"
+            className="logo-hero"
+          />
 
           <section className="typed-shadow">
             <h1 className="typed">
@@ -34,6 +56,7 @@ const Home = () => {
             <h1 className="typed">
               <ReactTyped
                 strings={[
+                  "Webentwickler in Offenburg, Lahr & Ortenau",
                   "Professionelle Webentwicklung für dein Business",
                   "Moderne React-Anwendungen nach Maß",
                   "Dein Partner für digitale Lösungen",
@@ -49,9 +72,10 @@ const Home = () => {
           </section>
 
           <p>
-            Moderne, individuelle Webseiten – professionell entwickelt, flexibel
-            betreut und zu fairen Konditionen realisiert. Von der ersten Idee
-            bis zum fertigen Projekt.
+            Moderne, individuelle Webseiten – professionell entwickelt in
+            Offenburg, Lahr und der Ortenau. Flexibel betreut und zu fairen
+            Konditionen realisiert. Von der ersten Idee bis zum fertigen
+            Projekt.
           </p>
 
           <div className="cta-buttons">

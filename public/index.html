@@ -2,44 +2,165 @@
 <html lang="de">
   <head>
     <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0066cc" />
+    <meta name="theme-color" content="#00d4ff" />
+
+    <!-- SEO Meta Tags -->
     <meta
       name="description"
-      content="Ehrlich beraten, fair betreut: IT‑Lösungen für kleine Unternehmen im Nebengewerbe."
+      content="Professionelle Webentwicklung in Offenburg, Lahr & Ortenau ✓ React & Django Entwickler ✓ Moderne Websites & Apps ✓ Full-Stack Development ✓ Jetzt unverbindlich anfragen!"
     />
     <meta
       name="keywords"
-      content="IT‑Dienstleister, kleine Unternehmen, Nebengewerbe, Software, Beratung, Technik‑Lanz"
+      content="Webentwickler Offenburg, Webentwicklung Lahr, Webdesign Ortenau, React Entwickler Offenburg, Django Entwickler Lahr, Full-Stack Entwickler Ortenau, Website erstellen Offenburg, App Entwicklung Lahr, Webdesign Ortenau, Programmierung Offenburg"
     />
+    <meta name="author" content="Daniel Lanz - Technik-Lanz" />
+    <meta name="robots" content="index, follow" />
+
     <!-- Open Graph Meta Tags -->
-    <meta property="og:type" content="website" />
     <meta
       property="og:title"
-      content="Technik‑Lanz – IT‑Dienstleistungen für kleine Unternehmen"
+      content="Webentwickler Offenburg, Lahr & Ortenau | Technik-Lanz"
     />
     <meta
       property="og:description"
-      content="Ehrlich beraten, fair betreut: IT‑Lösungen für kleine Unternehmen im Nebengewerbe."
+      content="Professionelle Webentwicklung in Offenburg, Lahr & Ortenau. React, Django, Full-Stack Development. Moderne Websites & Apps für Ihr Business."
     />
-    <meta property="og:image" content="%PUBLIC_URL%/logo.png" />
+    <meta property="og:type" content="website" />
     <meta property="og:url" content="https://technik-lanz.de" />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta property="og:locale" content="de_DE" />
+
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Technik‑Lanz – IT‑Dienstleistungen für kleine Unternehmen"
+      content="Webentwickler Offenburg, Lahr & Ortenau | Technik-Lanz"
     />
     <meta
       name="twitter:description"
-      content="Ehrlich beraten, fair betreut: IT‑Lösungen für kleine Unternehmen im Nebengewerbe."
+      content="Professionelle Webentwicklung in Offenburg, Lahr & Ortenau. React, Django, Full-Stack Development."
     />
-    <meta name="twitter:image" content="%PUBLIC_URL%/logo.png" />
-    <link rel="icon" type="image/png" href="%PUBLIC_URL%/logo.png" />
-    <title>Technik‑Lanz – IT‑Dienstleistungen für kleine Unternehmen</title>
+    <meta name="twitter:image" content="%PUBLIC_URL%/og-image.jpg" />
+
+    <!-- Local Business Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Technik-Lanz - Webentwicklung",
+        "image": "https://technik-lanz.de/logo.png",
+        "description": "Professionelle Webentwicklung in Offenburg, Lahr und Ortenau. Spezialisiert auf React, Django und Full-Stack Development.",
+        "telephone": "+49-174-263-8614",
+        "email": "info@technik-lanz.de",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Offenburg",
+          "addressRegion": "Baden-Württemberg",
+          "postalCode": "77652",
+          "addressCountry": "DE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "48.4721",
+          "longitude": "7.9416"
+        },
+        "url": "https://technik-lanz.de",
+        "priceRange": "€€",
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Offenburg"
+          },
+          {
+            "@type": "City",
+            "name": "Lahr"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Ortenaukreis"
+          }
+        ],
+        "serviceType": [
+          "Webentwicklung",
+          "Full-Stack Development",
+          "React Entwicklung",
+          "Django Entwicklung",
+          "Webdesign",
+          "App Entwicklung"
+        ],
+        "sameAs": [
+          "https://github.com/LanzDesign",
+          "https://linkedin.com/in/yourusername"
+        ]
+      }
+    </script>
+
+    <!-- Professional Service Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Technik-Lanz Webentwicklung",
+        "description": "Webentwickler in Offenburg, Lahr und Ortenau für moderne Websites und Apps",
+        "provider": {
+          "@type": "Person",
+          "name": "Daniel Lanz",
+          "jobTitle": "Full-Stack Webentwickler"
+        },
+        "areaServed": [
+          "Offenburg",
+          "Lahr",
+          "Ortenaukreis",
+          "Baden-Württemberg"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Webentwicklung Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Webentwicklung",
+                "description": "Moderne, responsive Websites mit React und Next.js"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Full-Stack Development",
+                "description": "Komplette Webanwendungen mit Django und React"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "App Entwicklung",
+                "description": "Mobile-first Web-Apps und Progressive Web Apps"
+              }
+            }
+          ]
+        }
+      }
+    </script>
+
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="canonical" href="https://technik-lanz.de" />
+
+    <title>
+      Webentwickler Offenburg, Lahr & Ortenau | React & Django | Technik-Lanz
+    </title>
   </head>
   <body>
-    <noscript>Sie benötigen JavaScript, um diese Webseite zu nutzen.</noscript>
+    <noscript
+      >Webentwickler in Offenburg, Lahr und Ortenau - Technik-Lanz bietet
+      professionelle Webentwicklung mit React und Django.</noscript
+    >
     <div id="root"></div>
   </body>
 </html>
