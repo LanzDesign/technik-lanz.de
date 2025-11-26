@@ -1,8 +1,10 @@
 /* Cookie Settings Toggle Button - Fixed Position Bottom Left */
 .cookie-settings-toggle {
-  position: fixed;
-  bottom: 30px;
-  left: 30px;
+  position: fixed !important;
+  bottom: 30px !important;
+  left: 30px !important;
+  right: auto !important;
+  top: auto !important;
   width: 60px;
   height: 60px;
   background: linear-gradient(135deg, #00d4ff, #0099ff);
@@ -10,28 +12,33 @@
   border-radius: 50%;
   font-size: 2rem;
   cursor: pointer;
-  z-index: 9998;
+  z-index: 99999 !important;
   transition: all 0.3s ease;
   box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
+  margin: 0;
+  transform: none !important;
 }
 
 .cookie-settings-toggle:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) !important;
   box-shadow: 0 8px 30px rgba(0, 212, 255, 0.6);
   border-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Cookie Settings Panel - Opens to the right */
+/* Cookie Settings Panel */
 .cookie-settings-panel {
   position: fixed;
   bottom: 30px;
   left: 110px;
   width: 320px;
-  max-height: 500px;
+  max-width: calc(100vw - 140px);
+  max-height: 70vh;
   overflow-y: auto;
+  overflow-x: hidden;
   background: linear-gradient(
     145deg,
     rgba(10, 14, 39, 0.98) 0%,
@@ -41,7 +48,7 @@
   border: 2px solid rgba(0, 212, 255, 0.3);
   border-radius: 20px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-  z-index: 9997;
+  z-index: 99998;
   animation: slideInLeft 0.3s ease-out;
 }
 
@@ -201,8 +208,8 @@
 /* Responsive */
 @media (max-width: 768px) {
   .cookie-settings-toggle {
-    left: 20px;
-    bottom: 30px;
+    left: 20px !important;
+    bottom: 30px !important;
     width: 55px;
     height: 55px;
     font-size: 1.8rem;
@@ -213,14 +220,14 @@
     left: 90px;
     right: 20px;
     width: auto;
-    max-width: none;
+    max-width: calc(100vw - 110px);
   }
 }
 
 @media (max-width: 480px) {
   .cookie-settings-toggle {
-    left: 15px;
-    bottom: 25px;
+    left: 15px !important;
+    bottom: 25px !important;
     width: 50px;
     height: 50px;
     font-size: 1.6rem;
@@ -230,5 +237,6 @@
     bottom: 25px;
     left: 75px;
     right: 15px;
+    max-width: calc(100vw - 90px);
   }
 }

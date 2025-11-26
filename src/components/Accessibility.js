@@ -96,6 +96,13 @@ const Accessibility = () => {
         className="accessibility-toggle"
         onClick={togglePanel}
         aria-label="Barrierefreiheit-Einstellungen öffnen"
+        style={{
+          position: "fixed",
+          bottom: "30px",
+          right: "30px",
+          left: "auto",
+          top: "auto",
+        }}
       >
         ♿
       </button>

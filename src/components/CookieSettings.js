@@ -36,6 +36,13 @@ const CookieSettings = () => {
         onClick={togglePanel}
         aria-label="Cookie-Einstellungen öffnen"
         title="Cookie-Einstellungen"
+        style={{
+          position: "fixed",
+          bottom: "30px",
+          left: "30px",
+          right: "auto",
+          top: "auto",
+        }}
       >
         🍪
       </button>

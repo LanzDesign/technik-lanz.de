@@ -23,9 +23,11 @@
 
 /* Accessibility Toggle Button - Fixed Position Bottom Right */
 .accessibility-toggle {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
+  position: fixed !important;
+  bottom: 30px !important;
+  right: 30px !important;
+  left: auto !important;
+  top: auto !important;
   width: 60px;
   height: 60px;
   background: linear-gradient(135deg, #00d4ff, #0099ff);
@@ -33,16 +35,19 @@
   border-radius: 50%;
   font-size: 2rem;
   cursor: pointer;
-  z-index: 9998;
+  z-index: 99999 !important;
   transition: all 0.3s ease;
   box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
+  margin: 0;
+  transform: none !important;
 }
 
 .accessibility-toggle:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) !important;
   box-shadow: 0 8px 30px rgba(0, 212, 255, 0.6);
   border-color: rgba(255, 255, 255, 0.5);
 }
@@ -53,8 +58,10 @@
   bottom: 30px;
   right: 110px;
   width: 320px;
-  max-height: 500px;
+  max-width: calc(100vw - 140px);
+  max-height: 70vh;
   overflow-y: auto;
+  overflow-x: hidden;
   background: linear-gradient(
     145deg,
     rgba(10, 14, 39, 0.98) 0%,
@@ -64,7 +71,7 @@
   border: 2px solid rgba(0, 212, 255, 0.3);
   border-radius: 20px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-  z-index: 9997;
+  z-index: 99998;
   animation: slideInRight 0.3s ease-out;
 }
 
@@ -86,6 +93,11 @@
   align-items: center;
   padding: 20px;
   border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+  position: sticky;
+  top: 0;
+  background: rgba(10, 14, 39, 0.98);
+  backdrop-filter: blur(20px);
+  z-index: 1;
 }
 
 .accessibility-header h3 {
@@ -101,6 +113,11 @@
   font-size: 1.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .close-btn:hover {
@@ -189,16 +206,27 @@
   box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
 }
 
-/* Accessibility Classes */
+/* Accessibility Classes - Verbessert */
 body.high-contrast {
-  filter: contrast(1.5);
+  filter: contrast(1.5) !important;
+}
+
+body.high-contrast * {
+  filter: none;
 }
 
 body.grayscale {
-  filter: grayscale(100%);
+  filter: grayscale(100%) !important;
 }
 
-body.increased-line-height * {
+body.grayscale * {
+  filter: none;
+}
+
+body.increased-line-height p,
+body.increased-line-height span,
+body.increased-line-height li,
+body.increased-line-height a {
   line-height: 2 !important;
 }
 
@@ -206,11 +234,40 @@ body.readable-font * {
   font-family: "Arial", "Helvetica", sans-serif !important;
 }
 
+/* Stelle sicher, dass Buttons immer sichtbar bleiben */
+body.high-contrast .accessibility-toggle,
+body.high-contrast .cookie-settings-toggle,
+body.grayscale .accessibility-toggle,
+body.grayscale .cookie-settings-toggle {
+  position: fixed !important;
+  z-index: 99999 !important;
+  filter: none !important;
+}
+
+/* Scrollbar Styling */
+.accessibility-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.accessibility-panel::-webkit-scrollbar-track {
+  background: rgba(0, 212, 255, 0.05);
+  border-radius: 10px;
+}
+
+.accessibility-panel::-webkit-scrollbar-thumb {
+  background: rgba(0, 212, 255, 0.3);
+  border-radius: 10px;
+}
+
+.accessibility-panel::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .accessibility-toggle {
-    right: 20px;
-    bottom: 30px;
+    right: 20px !important;
+    bottom: 30px !important;
     width: 55px;
     height: 55px;
     font-size: 1.8rem;
@@ -221,14 +278,14 @@ body.readable-font * {
     right: 90px;
     left: 20px;
     width: auto;
-    max-width: none;
+    max-width: calc(100vw - 110px);
   }
 }
 
 @media (max-width: 480px) {
   .accessibility-toggle {
-    right: 15px;
-    bottom: 25px;
+    right: 15px !important;
+    bottom: 25px !important;
     width: 50px;
     height: 50px;
     font-size: 1.6rem;
@@ -238,5 +295,6 @@ body.readable-font * {
     bottom: 25px;
     right: 75px;
     left: 15px;
+    max-width: calc(100vw - 90px);
   }
 }
