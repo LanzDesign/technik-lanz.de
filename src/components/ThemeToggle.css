@@ -198,7 +198,25 @@ body.light-mode .newsletter-button {
   border-color: #00d4ff !important;
 }
 
-body.light-mode .glowing-btn:hover,
+body.light-mode .glowing-btn {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #00d4ff, #0099ff) !important;
+  border: none !important;
+  box-shadow: 0 10px 30px rgba(0, 153, 255, 0.4) !important;
+}
+
+body.light-mode .glowing-btn::before {
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.3), 
+    transparent) !important;
+}
+
+body.light-mode .glowing-btn:hover {
+  background: linear-gradient(135deg, #0099ff, #0066ff) !important;
+  box-shadow: 0 15px 50px rgba(0, 153, 255, 0.6) !important;
+}
+
 body.light-mode .project-link:hover,
 body.light-mode .service-link:hover,
 body.light-mode .form-button:hover,
@@ -206,6 +224,25 @@ body.light-mode .faq-cta-btn:hover,
 body.light-mode .featured-btn:hover,
 body.light-mode .cta-btn:hover {
   background: linear-gradient(135deg, #0099ff, #0066ff) !important;
+}
+
+/* Light Mode - Typed Text Glow */
+body.light-mode .typed {
+  animation: textGlowLight 2s ease-in-out infinite !important;
+}
+
+@keyframes textGlowLight {
+  0%, 100% { filter: drop-shadow(0 0 10px rgba(0, 153, 255, 0.5)); }
+  50% { filter: drop-shadow(0 0 25px rgba(0, 153, 255, 0.8)); }
+}
+
+/* Light Mode - Logo Glow */
+body.light-mode .logo-hero {
+  filter: drop-shadow(0 0 30px rgba(0, 153, 255, 0.5)) !important;
+}
+
+body.light-mode .logo-hero:hover {
+  filter: drop-shadow(0 0 50px rgba(0, 153, 255, 0.8)) !important;
 }
 
 /* Footer */
@@ -369,6 +406,66 @@ body.light-mode .button-group button {
 body.light-mode .button-group button:hover {
   background: linear-gradient(135deg, #00d4ff, #0099ff) !important;
   color: #ffffff !important;
+}
+
+/* Cookie & Accessibility Panels - Light Mode */
+body.light-mode .cookie-settings-panel,
+body.light-mode .accessibility-panel {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border-color: rgba(0, 212, 255, 0.4) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+body.light-mode .cookie-settings-header,
+body.light-mode .accessibility-header {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border-bottom-color: rgba(0, 212, 255, 0.3) !important;
+}
+
+body.light-mode .cookie-settings-header h3,
+body.light-mode .accessibility-header h3 {
+  color: #1a1a1a !important;
+}
+
+body.light-mode .cookie-option {
+  background: rgba(0, 212, 255, 0.08) !important;
+  border-color: rgba(0, 212, 255, 0.3) !important;
+}
+
+body.light-mode .option-title,
+body.light-mode .option-description,
+body.light-mode .cookie-info p,
+body.light-mode .accessibility-option label,
+body.light-mode .accessibility-content label {
+  color: #1a1a1a !important;
+}
+
+body.light-mode .close-btn {
+  color: #1a1a1a !important;
+}
+
+body.light-mode .close-btn:hover {
+  color: #00d4ff !important;
+}
+
+body.light-mode .button-group span {
+  color: #00d4ff !important;
+}
+
+/* Scrollbar Light Mode */
+body.light-mode .cookie-settings-panel::-webkit-scrollbar-track,
+body.light-mode .accessibility-panel::-webkit-scrollbar-track {
+  background: rgba(0, 212, 255, 0.1) !important;
+}
+
+body.light-mode .cookie-settings-panel::-webkit-scrollbar-thumb,
+body.light-mode .accessibility-panel::-webkit-scrollbar-thumb {
+  background: rgba(0, 212, 255, 0.4) !important;
+}
+
+body.light-mode .cookie-settings-panel::-webkit-scrollbar-thumb:hover,
+body.light-mode .accessibility-panel::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color) !important;
 }
 
 /* Responsive */
