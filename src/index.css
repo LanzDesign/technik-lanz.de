@@ -15,6 +15,15 @@
   --glow-color: rgba(0, 212, 255, 0.4);
 }
 
+/* Smooth Scrolling für die gesamte Website */
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* Kopfzeile - Modern & Glassmorphism */
 .header {
   display: flex;
@@ -262,9 +271,4 @@
     opacity: 1;
     transform: translateX(-50%) translateY(0);
   }
-}
-
-/* Smooth Scrolling Enhancement */
-html {
-  scroll-behavior: smooth;
 }

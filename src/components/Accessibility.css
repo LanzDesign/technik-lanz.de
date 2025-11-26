@@ -1,0 +1,242 @@
+/* Accessibility Toggle Button */
+.accessibility-toggle {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(135deg, #00d4ff, #0099ff);
+  border: 2px solid rgba(0, 212, 255, 0.5);
+  border-radius: 50%;
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 9998;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
+}
+
+.accessibility-toggle:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 8px 30px rgba(0, 212, 255, 0.6);
+}
+
+/* Accessibility Toggle Button - Fixed Position Bottom Right */
+.accessibility-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #00d4ff, #0099ff);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 9998;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accessibility-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 30px rgba(0, 212, 255, 0.6);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Accessibility Panel - Opens to the left */
+.accessibility-panel {
+  position: fixed;
+  bottom: 30px;
+  right: 110px;
+  width: 320px;
+  max-height: 500px;
+  overflow-y: auto;
+  background: linear-gradient(
+    145deg,
+    rgba(10, 14, 39, 0.98) 0%,
+    rgba(5, 10, 31, 0.98) 100%
+  );
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(0, 212, 255, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  z-index: 9997;
+  animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Accessibility Header */
+.accessibility-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.accessibility-header h3 {
+  color: var(--text-white);
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-white);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  color: var(--accent-color);
+  transform: rotate(90deg);
+}
+
+/* Accessibility Content */
+.accessibility-content {
+  padding: 20px;
+}
+
+/* Accessibility Options */
+.accessibility-option {
+  margin-bottom: 20px;
+}
+
+/* Accessibility Option Labels */
+.accessibility-option label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-white);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Accessibility Option Inputs */
+.accessibility-option input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--accent-color);
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Button Group Buttons */
+.button-group button {
+  padding: 8px 16px;
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 8px;
+  color: var(--text-white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-group button:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+/* Button Group Spans */
+.button-group span {
+  color: var(--accent-color);
+  font-weight: 700;
+  min-width: 50px;
+  text-align: center;
+}
+
+/* Reset Button */
+.reset-btn {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 2px solid var(--accent-color);
+  border-radius: 25px;
+  color: var(--text-white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.reset-btn:hover {
+  background: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
+}
+
+/* Accessibility Classes */
+body.high-contrast {
+  filter: contrast(1.5);
+}
+
+body.grayscale {
+  filter: grayscale(100%);
+}
+
+body.increased-line-height * {
+  line-height: 2 !important;
+}
+
+body.readable-font * {
+  font-family: "Arial", "Helvetica", sans-serif !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .accessibility-toggle {
+    right: 20px;
+    bottom: 30px;
+    width: 55px;
+    height: 55px;
+    font-size: 1.8rem;
+  }
+
+  .accessibility-panel {
+    bottom: 30px;
+    right: 90px;
+    left: 20px;
+    width: auto;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .accessibility-toggle {
+    right: 15px;
+    bottom: 25px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.6rem;
+  }
+
+  .accessibility-panel {
+    bottom: 25px;
+    right: 75px;
+    left: 15px;
+  }
+}

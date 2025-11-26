@@ -8,6 +8,9 @@ import Datenschutz from "./components/Datenschutz";
 import AGB from "./components/AGB";
 import "./App.css";
 import logoImage from "./assets/logo.png";
+import CookieBanner from "./components/CookieBanner";
+import CookieSettings from "./components/CookieSettings";
+import Accessibility from "./components/Accessibility";
 
 /**
  * Die Hauptanwendung definiert die Navigation und das Layout der Seite.
@@ -24,6 +27,8 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <Accessibility />
+      <CookieSettings />
       <main className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -162,6 +167,8 @@ function App() {
           </div>
         </div>
       </footer>
+
+      <CookieBanner />
     </div>
   );
 }
