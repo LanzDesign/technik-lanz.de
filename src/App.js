@@ -119,26 +119,27 @@ function App() {
               </ul>
             </div>
 
-            {/* Newsletter */}
-            <div className="footer-newsletter">
-              <h4>Newsletter</h4>
-              <p>
-                Bleib auf dem Laufenden über neue Projekte und Technologien.
-              </p>
-              <form
-                className="newsletter-form"
-                onSubmit={(e) => e.preventDefault()}
-              >
-                <input
-                  type="email"
-                  placeholder="Deine E-Mail"
-                  className="newsletter-input"
-                  required
-                />
-                <button type="submit" className="newsletter-button">
-                  →
-                </button>
-              </form>
+            {/* Contact Info */}
+            <div className="footer-section">
+              <h4>Kontakt</h4>
+              <div className="footer-contact">
+                <div className="footer-contact-item">
+                  <span className="contact-icon">📧</span>
+                  <a href="mailto:info@technik-lanz.de">info@technik-lanz.de</a>
+                </div>
+                <div className="footer-contact-item">
+                  <span className="contact-icon">📱</span>
+                  <a href="tel:+491742638614">+49 174 263 8614</a>
+                </div>
+                <div className="footer-contact-item">
+                  <span className="contact-icon">📍</span>
+                  <span>Deutschland</span>
+                </div>
+                <div className="footer-contact-item">
+                  <span className="contact-icon">⏰</span>
+                  <span>Mo - Fr: 9:00 - 18:00</span>
+                </div>
+              </div>
             </div>
           </div>
 

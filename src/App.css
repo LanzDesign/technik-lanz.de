@@ -184,6 +184,41 @@
   padding-left: 15px;
 }
 
+/* Footer Contact Section */
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+}
+
+.footer-contact-item:hover {
+  color: var(--accent-color);
+  padding-left: 5px;
+}
+
+.contact-icon {
+  font-size: 1.3rem;
+  filter: drop-shadow(0 0 5px rgba(0, 212, 255, 0.3));
+}
+
+.footer-contact-item a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-contact-item a:hover {
+  color: var(--accent-color);
+}
+
 /* Footer Bottom */
 .footer-bottom {
   padding-top: 30px;
@@ -230,6 +265,10 @@
 
   .footer-grid {
     justify-content: center;
+  }
+
+  .footer-contact {
+    gap: 12px;
   }
 }
 
