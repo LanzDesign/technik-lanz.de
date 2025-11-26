@@ -18,6 +18,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Hier kannst du die Form-Daten verarbeiten
     console.log("Form submitted:", formData);
     alert(
       "Vielen Dank für deine Nachricht! Ich melde mich schnellstmöglich bei dir."
@@ -157,7 +158,6 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
-              title="GitHub"
             >
               <span>💻</span>
             </a>
@@ -166,7 +166,6 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
-              title="LinkedIn"
             >
               <span>💼</span>
             </a>
@@ -175,16 +174,8 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
-              title="Twitter"
             >
               <span>🐦</span>
-            </a>
-            <a
-              href="mailto:kontakt@technik-lanz.de"
-              className="social-link"
-              title="E-Mail"
-            >
-              <span>✉️</span>
             </a>
           </div>
         </div>

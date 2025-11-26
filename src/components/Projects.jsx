@@ -104,9 +104,7 @@ const Projects = () => {
   ];
 
   const filteredProjects =
-    filter === "all"
-      ? projects
-      : projects.filter((p) => p.category === filter);
+    filter === "all" ? projects : projects.filter((p) => p.category === filter);
 
   const featuredProject = projects.find((p) => p.featured);
 
@@ -221,13 +219,11 @@ const Projects = () => {
 
                   <div className="project-overlay">
                     <div className="project-tech-tags">
-                      {project.technologies
-                        .slice(0, 3)
-                        .map((tech, index) => (
-                          <span key={index} className="tech-tag">
-                            {tech}
-                          </span>
-                        ))}
+                      {project.technologies.slice(0, 3).map((tech, index) => (
+                        <span key={index} className="tech-tag">
+                          {tech}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -247,18 +243,18 @@ const Projects = () => {
                         : "status-development"
                     }`}
                   >
-                    {project.status === "live" ? "🟢 Live" : "🟡 In Entwicklung"}
+                    {project.status === "live"
+                      ? "🟢 Live"
+                      : "🟡 In Entwicklung"}
                   </span>
 
                   <p className="project-description">{project.description}</p>
 
                   {project.features && (
                     <ul className="project-features-list">
-                      {project.features
-                        .slice(0, 3)
-                        .map((feature, index) => (
-                          <li key={index}>✓ {feature}</li>
-                        ))}
+                      {project.features.slice(0, 3).map((feature, index) => (
+                        <li key={index}>✓ {feature}</li>
+                      ))}
                     </ul>
                   )}
 
@@ -271,7 +267,11 @@ const Projects = () => {
                         className="project-link primary"
                       >
                         <span>Ansehen</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                        >
                           <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
                         </svg>
                       </a>
