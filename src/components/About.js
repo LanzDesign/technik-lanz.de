@@ -1,30 +1,42 @@
-import React from 'react';
-import './About.css';
+import React from "react";
+import "./About.css";
 
 const About = () => {
   const skills = [
     {
-      category: 'Frontend',
-      icon: '💻',
-      items: ['React & Next.js', 'JavaScript/TypeScript', 'HTML5 & CSS3', 'Tailwind CSS', 'GSAP Animations']
+      category: "Frontend",
+      icon: "💻",
+      items: [
+        "React & Next.js",
+        "JavaScript/TypeScript",
+        "HTML5 & CSS3",
+        "Tailwind CSS",
+        "GSAP Animations",
+      ],
     },
     {
-      category: 'Backend',
-      icon: '⚙️',
-      items: ['Django & Python', 'Node.js & Express', 'PostgreSQL', 'REST APIs', 'Authentication']
+      category: "Backend",
+      icon: "⚙️",
+      items: [
+        "Django & Python",
+        "Node.js & Express",
+        "PostgreSQL",
+        "REST APIs",
+        "Authentication",
+      ],
     },
     {
-      category: 'Tools & Workflow',
-      icon: '🛠️',
-      items: ['Git & GitHub', 'Docker', 'VS Code', 'Figma', 'Sanity CMS']
-    }
+      category: "Tools & Workflow",
+      icon: "🛠️",
+      items: ["Git & GitHub", "Docker", "VS Code", "Figma", "Sanity CMS"],
+    },
   ];
 
   const stats = [
-    { number: '3+', label: 'Jahre Erfahrung' },
-    { number: '30+', label: 'Projekte' },
-    { number: '15+', label: 'Kunden' },
-    { number: '100%', label: 'Qualität' }
+    { number: "3+", label: "Jahre Erfahrung" },
+    { number: "30+", label: "Projekte" },
+    { number: "15+", label: "Kunden" },
+    { number: "100%", label: "Qualität" },
   ];
 
   return (
@@ -32,40 +44,46 @@ const About = () => {
       <div className="about-container">
         <div className="about-content">
           <div className="about-image-wrapper">
-            <img 
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80" 
-              alt="Workspace" 
+            <img
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80"
+              alt="Workspace"
               className="about-image"
             />
           </div>
 
           <div className="about-text">
             <h2 className="about-title">Über mich</h2>
-            <p className="about-subtitle">Webentwickler & Full-Stack Developer</p>
-            
-            <p className="about-description">
-              Hallo! Ich bin Daniel Lanz, ein leidenschaftlicher Webentwickler mit Fokus auf 
-              moderne Webtechnologien. Seit über 3 Jahren entwickle ich maßgeschneiderte 
-              digitale Lösungen für Unternehmen und Privatpersonen.
+            <p className="about-subtitle">
+              Webentwickler & Full-Stack Developer
             </p>
 
             <p className="about-description">
-              Meine Expertise liegt in der Entwicklung von performanten React-Anwendungen 
-              und komplexen Full-Stack-Projekten. Ich liebe es, innovative Ideen in 
-              funktionale, benutzerfreundliche Websites zu verwandeln.
+              Hallo! Ich bin Daniel Lanz, ein leidenschaftlicher Webentwickler
+              mit Fokus auf moderne Webtechnologien. Seit über 3 Jahren
+              entwickle ich maßgeschneiderte digitale Lösungen für Unternehmen
+              und Privatpersonen.
+            </p>
+
+            <p className="about-description">
+              Meine Expertise liegt in der Entwicklung von performanten
+              React-Anwendungen und komplexen Full-Stack-Projekten. Ich liebe
+              es, innovative Ideen in funktionale, benutzerfreundliche Websites
+              zu verwandeln.
             </p>
 
             <div className="about-highlight">
               <p>
-                "Qualität und Kundenzufriedenheit stehen bei mir an erster Stelle. 
-                Jedes Projekt wird mit Sorgfalt, Kreativität und technischer Expertise umgesetzt."
+                "Qualität und Kundenzufriedenheit stehen bei mir an erster
+                Stelle. Jedes Projekt wird mit Sorgfalt, Kreativität und
+                technischer Expertise umgesetzt."
               </p>
             </div>
 
             <p className="about-description">
-              Von der ersten Idee bis zum fertigen Produkt begleite ich dich durch 
-              den gesamten Entwicklungsprozess. Dabei setze ich auf transparente 
-              Kommunikation, agile Methoden und modernste Technologien.
+              Von der ersten Idee bis zum fertigen Produkt begleite ich dich
+              durch den gesamten Entwicklungsprozess. Dabei setze ich auf
+              transparente Kommunikation, agile Methoden und modernste
+              Technologien.
             </p>
           </div>
         </div>
@@ -82,7 +100,9 @@ const About = () => {
                 </h4>
                 <ul className="skill-list">
                   {skill.items.map((item, idx) => (
-                    <li key={idx} className="skill-item">{item}</li>
+                    <li key={idx} className="skill-item">
+                      {item}
+                    </li>
                   ))}
                 </ul>
               </div>
