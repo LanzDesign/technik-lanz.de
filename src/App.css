@@ -235,6 +235,54 @@
   margin: 0;
 }
 
+/* Scroll to Top Button */
+.scroll-to-top-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 212, 255, 0.1),
+    rgba(0, 153, 255, 0.05)
+  );
+  border: 2px solid rgba(0, 212, 255, 0.3);
+  border-radius: 30px;
+  color: var(--text-white);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+}
+
+.scroll-to-top-btn:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.5);
+}
+
+.scroll-icon {
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+}
+
+.scroll-to-top-btn:hover .scroll-icon {
+  transform: translateY(-3px);
+  animation: bounce 0.6s ease infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .footer-content {
@@ -260,7 +308,14 @@
   .footer-bottom {
     flex-direction: column;
     text-align: center;
-    gap: 15px;
+    gap: 20px;
+  }
+
+  .scroll-to-top-btn {
+    order: -1;
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
   }
 
   .footer-grid {

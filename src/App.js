@@ -1,16 +1,12 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import Services from "./components/Services";
-import About from "./components/About";
-import Contact from "./components/Contact";
 import Impressum from "./components/Impressum";
 import Datenschutz from "./components/Datenschutz";
 import AGB from "./components/AGB";
 import "./App.css";
-import Projects from "./components/Projects";
 import logoImage from "./assets/logo.png";
 
 /**
@@ -18,17 +14,20 @@ import logoImage from "./assets/logo.png";
  * Sie verwendet React Router, um zwischen verschiedenen Ansichten zu wechseln.
  */
 function App() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="App">
-      <Header />
+      <Navbar />
       <main className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/impressum" element={<Impressum />} />
-          <Route path="/projects" element={<Projects />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
           <Route path="/agb" element={<AGB />} />
         </Routes>
@@ -51,7 +50,7 @@ function App() {
               </p>
               <div className="footer-social">
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/LanzDesign"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="footer-social-link"
@@ -67,7 +66,7 @@ function App() {
                   💼
                 </a>
                 <a
-                  href="mailto:kontakt@technik-lanz.de"
+                  href="mailto:info@technik-lanz.de"
                   className="footer-social-link"
                 >
                   ✉️
@@ -80,19 +79,19 @@ function App() {
               <h4>Quick Links</h4>
               <ul className="footer-links">
                 <li>
-                  <NavLink to="/">Home</NavLink>
+                  <a href="#home">Home</a>
                 </li>
                 <li>
                   <a href="#projekte">Projekte</a>
                 </li>
                 <li>
-                  <NavLink to="/services">Leistungen</NavLink>
+                  <a href="#leistungen">Leistungen</a>
                 </li>
                 <li>
-                  <NavLink to="/about">Über mich</NavLink>
+                  <a href="#über-uns">Über mich</a>
                 </li>
                 <li>
-                  <NavLink to="/contact">Kontakt</NavLink>
+                  <a href="#kontakt">Kontakt</a>
                 </li>
               </ul>
             </div>
@@ -147,6 +146,11 @@ function App() {
             <p>
               &copy; {new Date().getFullYear()} Technik‑Lanz – Webentwickler
             </p>
+
+            <button className="scroll-to-top-btn" onClick={scrollToTop}>
+              <span className="scroll-icon">↑</span>
+              <span>Scroll to Top</span>
+            </button>
 
             <div className="footer-grid">
               <NavLink to="/impressum">Impressum</NavLink>
