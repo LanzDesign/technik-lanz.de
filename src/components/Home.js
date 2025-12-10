@@ -18,7 +18,7 @@ const Home = () => {
   useEffect(() => {
     // Dynamische Meta-Tags für SEO
     document.title =
-      "Webentwickler Offenburg, Lahr & Ortenau | React & Django | Technik-Lanz";
+      "Webentwickler Offenburg & Ortenau | React | Technik-Lanz";
   }, []);
 
   return (
@@ -26,7 +26,7 @@ const Home = () => {
       <Helmet>
         <meta
           name="description"
-          content="Professionelle Webentwicklung in Offenburg, Lahr & Ortenau ✓ React & Django Entwickler ✓ Moderne Websites & Apps ✓ Full-Stack Development ✓ Jetzt unverbindlich anfragen!"
+          content="Professionelle Webentwicklung in Offenburg & Ortenau ✓ React & Django Entwickler ✓ Moderne Websites & Apps ✓ Full-Stack Development ✓ Jetzt anfragen!"
         />
         <meta
           name="keywords"
