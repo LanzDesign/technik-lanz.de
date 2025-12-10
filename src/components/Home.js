@@ -17,8 +17,7 @@ const Home = () => {
 
   useEffect(() => {
     // Dynamische Meta-Tags für SEO
-    document.title =
-      "Webentwickler Offenburg, Lahr & Ortenau | React & Django | Technik-Lanz";
+    document.title = "Webentwickler Offenburg & Lahr | Technik-Lanz";
   }, []);
 
   return (
@@ -26,7 +25,7 @@ const Home = () => {
       <Helmet>
         <meta
           name="description"
-          content="Professionelle Webentwicklung in Offenburg, Lahr & Ortenau ✓ React & Django Entwickler ✓ Moderne Websites & Apps ✓ Full-Stack Development ✓ Jetzt unverbindlich anfragen!"
+          content="Webentwickler in Offenburg, Lahr & Ortenau. React & Django Entwicklung. Moderne Websites & Apps. Jetzt anfragen!"
         />
         <meta
           name="keywords"
@@ -42,8 +41,12 @@ const Home = () => {
             className="logo-hero"
           />
 
+          <h1 className="main-heading visually-hidden">
+            Webentwickler in Offenburg, Lahr und Ortenau - Technik-Lanz
+          </h1>
+
           <section className="typed-shadow">
-            <h1 className="typed">
+            <div className="typed" role="heading" aria-level="2">
               <ReactTyped
                 strings={[
                   "Hallo, ich bin <span class='red'>Daniel Lanz</span>",
@@ -53,9 +56,9 @@ const Home = () => {
                 loop={false}
                 showCursor={false}
               />
-            </h1>
+            </div>
 
-            <h1 className="typed">
+            <div className="typed" role="heading" aria-level="2">
               <ReactTyped
                 strings={[
                   "Webentwickler in Offenburg, Lahr & Ortenau",
@@ -70,7 +73,7 @@ const Home = () => {
                 cursorChar="|"
                 startDelay={2000}
               />
-            </h1>
+            </div>
           </section>
 
           <p>
@@ -78,6 +81,17 @@ const Home = () => {
             Offenburg, Lahr und der Ortenau. Flexibel betreut und zu fairen
             Konditionen realisiert. Von der ersten Idee bis zum fertigen
             Projekt.
+          </p>
+
+          <p className="hero-extended-text">
+            Als erfahrener <strong>Webentwickler</strong> in der Region Offenburg, Lahr und Ortenau 
+            biete ich professionelle Dienstleistungen im Bereich <strong>React</strong> und <strong>Django</strong> Entwicklung. 
+            Ich erstelle moderne Websites, leistungsstarke Web-Apps und maßgeschneiderte digitale Lösungen 
+            für Unternehmen jeder Größe. Mit Fokus auf benutzerfreundliches Design, sauberen Code und 
+            nachhaltige Entwicklung helfe ich dir, deine Online-Präsenz zu stärken. Von der Konzeption 
+            über die Umsetzung bis hin zur langfristigen Betreuung – ich begleite dein Projekt in allen 
+            Phasen. Kontaktiere mich für eine unverbindliche Beratung und lass uns gemeinsam deine 
+            Ideen verwirklichen.
           </p>
 
           <div className="cta-buttons">

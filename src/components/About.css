@@ -422,3 +422,17 @@
     padding: 20px;
   }
 }
+
+/* Inline links for SEO */
+.inline-link {
+  color: #00d4ff;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: all 0.3s ease;
+}
+
+.inline-link:hover {
+  color: #00b8e6;
+  text-decoration-thickness: 2px;
+}

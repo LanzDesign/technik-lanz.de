@@ -115,7 +115,9 @@ const Projects = () => {
           <h2 className="projects-title">Meine Projekte</h2>
           <p className="projects-subtitle">
             Von Fullstack-Anwendungen bis zu modernen Websites – hier findest du
-            eine Auswahl meiner realisierten Projekte.
+            eine Auswahl meiner realisierten Projekte. Mehr über meine{" "}
+            <a href="#leistungen" className="inline-link">Leistungen</a> und{" "}
+            <a href="#über-uns" className="inline-link">meine Arbeitsweise</a>.
           </p>
         </div>
 
@@ -289,7 +291,11 @@ const Projects = () => {
         {/* CTA Section */}
         <div className="projects-cta">
           <h3>Interessiert an einem ähnlichen Projekt?</h3>
-          <p>Lass uns gemeinsam deine Idee in die Realität umsetzen!</p>
+          <p>
+            Lass uns gemeinsam deine Idee in die Realität umsetzen! Schau dir auch meine{" "}
+            <a href="#leistungen" className="inline-link">Leistungen</a> an oder{" "}
+            <a href="#kontakt" className="inline-link">kontaktiere mich</a> direkt.
+          </p>
           <a href="#kontakt" className="cta-btn">
             Jetzt Projekt anfragen
           </a>

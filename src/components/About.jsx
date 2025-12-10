@@ -61,14 +61,29 @@ const About = () => {
               Hallo! Ich bin Daniel Lanz, ein leidenschaftlicher Webentwickler
               mit Fokus auf moderne Webtechnologien. Seit über 3 Jahren
               entwickle ich maßgeschneiderte digitale Lösungen für Unternehmen
-              und Privatpersonen.
+              und Privatpersonen in Offenburg, Lahr und der Ortenau.
             </p>
 
             <p className="about-description">
-              Meine Expertise liegt in der Entwicklung von performanten
-              React-Anwendungen und komplexen Full-Stack-Projekten. Ich liebe
-              es, innovative Ideen in funktionale, benutzerfreundliche Websites
-              zu verwandeln.
+              Meine Expertise liegt in der Entwicklung von performanten{" "}
+              <a 
+                href="https://react.dev" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-link"
+              >
+                React
+              </a>-Anwendungen und komplexen Full-Stack-Projekten mit{" "}
+              <a 
+                href="https://www.djangoproject.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-link"
+              >
+                Django
+              </a>. Ich liebe es, innovative Ideen in funktionale, 
+              benutzerfreundliche Websites zu verwandeln. Mehr dazu in meinen{" "}
+              <a href="#projekte" className="inline-link">Projekten</a>.
             </p>
 
             <div className="about-highlight">
@@ -83,7 +98,9 @@ const About = () => {
               Von der ersten Idee bis zum fertigen Produkt begleite ich dich
               durch den gesamten Entwicklungsprozess. Dabei setze ich auf
               transparente Kommunikation, agile Methoden und modernste
-              Technologien.
+              Technologien. Erfahre mehr über meine{" "}
+              <a href="#leistungen" className="inline-link">Leistungen</a> oder{" "}
+              <a href="#kontakt" className="inline-link">kontaktiere mich</a> direkt.
             </p>
           </div>
         </div>

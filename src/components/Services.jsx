@@ -135,7 +135,10 @@ const Services = () => {
           <h2 className="services-title">Meine Leistungen</h2>
           <p className="services-subtitle">
             Von der ersten Idee bis zum fertigen Produkt – ich biete dir
-            umfassende Webentwicklungs-Dienstleistungen aus einer Hand.
+            umfassende Webentwicklungs-Dienstleistungen aus einer Hand. Schau dir 
+            meine <a href="#projekte" className="inline-link">Projekte</a> an oder{" "}
+            <a href="#kontakt" className="inline-link">kontaktiere mich</a> für ein 
+            unverbindliches Beratungsgespräch.
           </p>
         </div>
 
