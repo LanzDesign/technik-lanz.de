@@ -18,7 +18,7 @@ const Home = () => {
   useEffect(() => {
     // Dynamische Meta-Tags für SEO
     document.title =
-      "Webentwickler Offenburg, Lahr & Ortenau | React & Django | Technik-Lanz";
+      "Webentwickler Offenburg | React & Django | Technik-Lanz";
   }, []);
 
   return (
@@ -26,7 +26,7 @@ const Home = () => {
       <Helmet>
         <meta
           name="description"
-          content="Professionelle Webentwicklung in Offenburg, Lahr & Ortenau ✓ React & Django Entwickler ✓ Moderne Websites & Apps ✓ Full-Stack Development ✓ Jetzt unverbindlich anfragen!"
+          content="Webentwicklung Offenburg ✓ React & Django ✓ Moderne Websites & Apps ✓ Full-Stack Development ✓ Jetzt anfragen!"
         />
         <meta
           name="keywords"
@@ -55,7 +55,7 @@ const Home = () => {
               />
             </h1>
 
-            <h1 className="typed">
+            <h2 className="typed">
               <ReactTyped
                 strings={[
                   "Webentwickler in Offenburg, Lahr & Ortenau",
@@ -70,7 +70,7 @@ const Home = () => {
                 cursorChar="|"
                 startDelay={2000}
               />
-            </h1>
+            </h2>
           </section>
 
           <p>

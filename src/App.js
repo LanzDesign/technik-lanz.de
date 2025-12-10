@@ -12,7 +12,7 @@ import CookieBanner from "./components/CookieBanner";
 import CookieSettings from "./components/CookieSettings";
 import Accessibility from "./components/Accessibility";
 import ThemeToggle from "./components/ThemeToggle";
-import { FaGithub, FaLinkedin, FaEnvelope, FaArrowUp } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaArrowUp, FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
 /**
  * Die Hauptanwendung definiert die Navigation und das Layout der Seite.
@@ -62,6 +62,7 @@ function App() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="footer-social-link"
+                  aria-label="GitHub"
                 >
                   <FaGithub />
                 </a>
@@ -70,12 +71,41 @@ function App() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="footer-social-link"
+                  aria-label="LinkedIn"
                 >
                   <FaLinkedin />
                 </a>
                 <a
+                  href="https://facebook.com/techniklanz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-social-link"
+                  aria-label="Facebook"
+                >
+                  <FaFacebook />
+                </a>
+                <a
+                  href="https://instagram.com/technik.lanz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-social-link"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram />
+                </a>
+                <a
+                  href="https://youtube.com/@techniklanz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-social-link"
+                  aria-label="YouTube"
+                >
+                  <FaYoutube />
+                </a>
+                <a
                   href="mailto:info@technik-lanz.de"
                   className="footer-social-link"
+                  aria-label="Email"
                 >
                   <FaEnvelope />
                 </a>

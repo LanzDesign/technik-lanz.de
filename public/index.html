@@ -1,6 +1,34 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', 'YOUR_PIXEL_ID');
+      fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,7 +37,7 @@
     <!-- SEO Meta Tags -->
     <meta
       name="description"
-      content="Professionelle Webentwicklung in Offenburg, Lahr & Ortenau ✓ React & Django Entwickler ✓ Moderne Websites & Apps ✓ Full-Stack Development ✓ Jetzt unverbindlich anfragen!"
+      content="Webentwicklung Offenburg ✓ React & Django ✓ Moderne Websites & Apps ✓ Full-Stack Development ✓ Jetzt anfragen!"
     />
     <meta
       name="keywords"
@@ -21,11 +49,11 @@
     <!-- Open Graph Meta Tags -->
     <meta
       property="og:title"
-      content="Webentwickler Offenburg, Lahr & Ortenau | Technik-Lanz"
+      content="Webentwickler Offenburg | React & Django | Technik-Lanz"
     />
     <meta
       property="og:description"
-      content="Professionelle Webentwicklung in Offenburg, Lahr & Ortenau. React, Django, Full-Stack Development. Moderne Websites & Apps für Ihr Business."
+      content="Webentwicklung Offenburg ✓ React & Django ✓ Moderne Websites & Apps ✓ Full-Stack Development"
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://technik-lanz.de" />
@@ -36,11 +64,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Webentwickler Offenburg, Lahr & Ortenau | Technik-Lanz"
+      content="Webentwickler Offenburg | React & Django | Technik-Lanz"
     />
     <meta
       name="twitter:description"
-      content="Professionelle Webentwicklung in Offenburg, Lahr & Ortenau. React, Django, Full-Stack Development."
+      content="Webentwicklung Offenburg ✓ React & Django ✓ Moderne Websites & Apps ✓ Full-Stack Development"
     />
     <meta name="twitter:image" content="%PUBLIC_URL%/og-image.jpg" />
 
@@ -92,7 +120,10 @@
         ],
         "sameAs": [
           "https://github.com/LanzDesign",
-          "https://linkedin.com/in/yourusername"
+          "https://linkedin.com/in/yourusername",
+          "https://facebook.com/techniklanz",
+          "https://instagram.com/technik.lanz",
+          "https://youtube.com/@techniklanz"
         ]
       }
     </script>
@@ -152,9 +183,7 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="canonical" href="https://technik-lanz.de" />
 
-    <title>
-      Webentwickler Offenburg, Lahr & Ortenau | React & Django | Technik-Lanz
-    </title>
+    <title>Webentwickler Offenburg | React & Django | Technik-Lanz</title>
   </head>
   <body>
     <noscript
