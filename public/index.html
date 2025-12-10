@@ -2,15 +2,17 @@
 <html lang="de">
   <head>
     <!-- Google Analytics -->
+    <!-- TODO: Replace G-XXXXXXXXXX with your actual Google Analytics Measurement ID -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+      gtag('config', 'G-XXXXXXXXXX'); // TODO: Replace with your actual Measurement ID
     </script>
 
     <!-- Facebook Pixel Code -->
+    <!-- TODO: Replace YOUR_PIXEL_ID with your actual Facebook Pixel ID -->
     <script>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -20,10 +22,11 @@
       t.src=v;s=b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t,s)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', 'YOUR_PIXEL_ID');
+      fbq('init', 'YOUR_PIXEL_ID'); // TODO: Replace with your actual Pixel ID
       fbq('track', 'PageView');
     </script>
     <noscript>
+      <!-- TODO: Replace YOUR_PIXEL_ID with your actual Facebook Pixel ID -->
       <img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
     </noscript>
@@ -33,6 +36,10 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#00d4ff" />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://connect.facebook.net">
 
     <!-- SEO Meta Tags -->
     <meta
@@ -186,10 +193,7 @@
     <title>Webentwickler Offenburg | React & Django | Technik-Lanz</title>
   </head>
   <body>
-    <noscript
-      >Webentwickler in Offenburg, Lahr und Ortenau - Technik-Lanz bietet
-      professionelle Webentwicklung mit React und Django.</noscript
-    >
+    <noscript>Webentwickler Offenburg | React & Django | Technik-Lanz</noscript>
     <div id="root"></div>
   </body>
 </html>
