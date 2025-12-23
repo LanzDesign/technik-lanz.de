@@ -53,8 +53,8 @@ const Contact = () => {
               <span className="info-icon">📱</span>
               <h3 className="info-title">Telefon</h3>
               <p className="info-text">
-                <a href="tel:+4915012345678" className="info-link">
-                  +49 150 123 456 78
+                <a href="tel:+491742638614" className="info-link">
+                  +49 174 263 861 4
                 </a>
               </p>
             </div>
