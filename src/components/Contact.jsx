@@ -154,7 +154,7 @@ const Contact = () => {
           <h3 className="social-title">Folge mir</h3>
           <div className="social-links">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/LanzDesign"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
@@ -162,20 +162,12 @@ const Contact = () => {
               <span>💻</span>
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://linkedin.com/comm/mynetwork/discovery-see-all?"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
             >
               <span>💼</span>
-            </a>
-            <a
-              href="https://twitter.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-            >
-              <span>🐦</span>
             </a>
           </div>
         </div>
