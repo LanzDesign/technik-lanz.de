@@ -1,45 +1,10 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
-    <!-- Google Analytics -->
-    <!-- TODO: Replace G-XXXXXXXXXX with your actual Google Analytics Measurement ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX'); // TODO: Replace with your actual Measurement ID
-    </script>
-
-    <!-- Facebook Pixel Code -->
-    <!-- TODO: Replace YOUR_PIXEL_ID with your actual Facebook Pixel ID -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', 'YOUR_PIXEL_ID'); // TODO: Replace with your actual Pixel ID
-      fbq('track', 'PageView');
-    </script>
-    <noscript>
-      <!-- TODO: Replace YOUR_PIXEL_ID with your actual Facebook Pixel ID -->
-      <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
-    </noscript>
-    <!-- End Facebook Pixel Code -->
-
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#00d4ff" />
-
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="preconnect" href="https://connect.facebook.net">
 
     <!-- SEO Meta Tags -->
     <meta
@@ -54,30 +19,19 @@
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph Meta Tags -->
-    <meta
-      property="og:title"
-      content="Webentwickler Offenburg | React & Django | Technik-Lanz"
-    />
-    <meta
-      property="og:description"
-      content="Webentwicklung Offenburg ✓ React & Django ✓ Moderne Websites & Apps ✓ Full-Stack Development"
-    />
+    <meta property="og:title" content="Webentwickler Offenburg | React & Django | Technik-Lanz" />
+    <meta property="og:description" content="Webentwicklung Offenburg ✓ React & Django ✓ Moderne Websites & Apps ✓ Full-Stack Development" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://technik-lanz.de" />
-    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta property="og:image" content="https://technik-lanz.de/logo.png" />
     <meta property="og:locale" content="de_DE" />
+    <meta property="og:site_name" content="Technik-Lanz" />
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Webentwickler Offenburg | React & Django | Technik-Lanz"
-    />
-    <meta
-      name="twitter:description"
-      content="Webentwicklung Offenburg ✓ React & Django ✓ Moderne Websites & Apps ✓ Full-Stack Development"
-    />
-    <meta name="twitter:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta name="twitter:title" content="Webentwickler Offenburg | React & Django | Technik-Lanz" />
+    <meta name="twitter:description" content="Webentwicklung Offenburg ✓ React & Django ✓ Moderne Websites & Apps ✓ Full-Stack Development" />
+    <meta name="twitter:image" content="https://technik-lanz.de/logo.png" />
 
     <!-- Local Business Schema.org -->
     <script type="application/ld+json">
@@ -88,7 +42,8 @@
         "image": "https://technik-lanz.de/logo.png",
         "description": "Professionelle Webentwicklung in Offenburg, Lahr und Ortenau. Spezialisiert auf React, Django und Full-Stack Development.",
         "telephone": "+49-174-263-8614",
-        "email": "info@technik-lanz.de",
+        "email": "kontakt@technik-lanz.de",
+        "url": "https://technik-lanz.de",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Offenburg",
@@ -101,94 +56,78 @@
           "latitude": "48.4721",
           "longitude": "7.9416"
         },
-        "url": "https://technik-lanz.de",
         "priceRange": "€€",
         "areaServed": [
-          {
-            "@type": "City",
-            "name": "Offenburg"
-          },
-          {
-            "@type": "City",
-            "name": "Lahr"
-          },
-          {
-            "@type": "AdministrativeArea",
-            "name": "Ortenaukreis"
-          }
+          { "@type": "City", "name": "Offenburg" },
+          { "@type": "City", "name": "Lahr" },
+          { "@type": "AdministrativeArea", "name": "Ortenaukreis" }
         ],
         "serviceType": [
-          "Webentwicklung",
-          "Full-Stack Development",
-          "React Entwicklung",
-          "Django Entwicklung",
-          "Webdesign",
-          "App Entwicklung"
+          "Webentwicklung", "Full-Stack Development", "React Entwicklung",
+          "Django Entwicklung", "Webdesign", "App Entwicklung"
         ],
         "sameAs": [
-          "https://github.com/LanzDesign",
-          "https://linkedin.com/in/yourusername",
-          "https://facebook.com/techniklanz",
-          "https://instagram.com/technik.lanz",
-          "https://youtube.com/@techniklanz"
+          "https://github.com/LanzDesign"
         ]
       }
     </script>
 
-    <!-- Professional Service Schema -->
+    <!-- FAQ Schema for Google Rich Results -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Technik-Lanz Webentwicklung",
-        "description": "Webentwickler in Offenburg, Lahr und Ortenau für moderne Websites und Apps",
-        "provider": {
-          "@type": "Person",
-          "name": "Daniel Lanz",
-          "jobTitle": "Full-Stack Webentwickler"
-        },
-        "areaServed": [
-          "Offenburg",
-          "Lahr",
-          "Ortenaukreis",
-          "Baden-Württemberg"
-        ],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Webentwicklung Services",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Webentwicklung",
-                "description": "Moderne, responsive Websites mit React und Next.js"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Full-Stack Development",
-                "description": "Komplette Webanwendungen mit Django und React"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "App Entwicklung",
-                "description": "Mobile-first Web-Apps und Progressive Web Apps"
-              }
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Was kostet eine professionelle Website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Eine einfache Website startet ab 1.500€. Umfangreichere Projekte mit CMS und individuellen Features beginnen ab 3.500€. Kostenlose Beratung auf Anfrage."
             }
-          ]
-        }
+          },
+          {
+            "@type": "Question",
+            "name": "Wie lange dauert die Entwicklung einer Website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Eine einfache Website ist in 2-4 Wochen fertig. Full-Stack-Projekte benötigen 6-12 Wochen, abhängig von Umfang und Komplexität."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Welche Technologien verwendet Technik-Lanz?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ich spezialisiere mich auf React, Next.js (Frontend) sowie Django und Node.js (Backend). Für CMS-Lösungen setze ich auf Sanity CMS oder WordPress."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wo ist Technik-Lanz tätig?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ich bin in Offenburg, Lahr und der gesamten Ortenau tätig. Persönliche Termine in der Region sowie Remote-Arbeit bundesweit sind möglich."
+            }
+          }
+        ]
       }
     </script>
 
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="canonical" href="https://technik-lanz.de" />
+
+    <!-- Google Analytics – TODO: G-XXXXXXXXXX durch echte Measurement ID ersetzen -->
+    <!-- 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
 
     <title>Webentwickler Offenburg | React & Django | Technik-Lanz</title>
   </head>

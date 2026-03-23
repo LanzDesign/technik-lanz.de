@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./Contact.css";
 
 const Contact = () => {
@@ -8,21 +9,35 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+  const [status, setStatus] = useState(null); // null | 'sending' | 'success' | 'error'
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert(
-      "Vielen Dank für deine Nachricht! Ich melde mich schnellstmöglich bei dir."
-    );
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setStatus("sending");
+
+    try {
+      await emailjs.send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_email: "kontakt@technik-lanz.de",
+        },
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      );
+      setStatus("success");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (err) {
+      console.error("EmailJS error:", err);
+      setStatus("error");
+    }
   };
 
   return (
@@ -30,7 +45,7 @@ const Contact = () => {
       <div className="contact-container">
         <div className="contact-header">
           <h2 className="contact-title">
-            Kontakt in Offenburg, Lahr & Ortenau
+            Kontakt in Offenburg, Lahr &amp; Ortenau
           </h2>
           <p className="contact-subtitle">
             Lass uns gemeinsam dein nächstes Projekt in Offenburg, Lahr oder der
@@ -54,8 +69,8 @@ const Contact = () => {
               <span className="info-icon">📱</span>
               <h3 className="info-title">Telefon</h3>
               <p className="info-text">
-                <a href="tel:+4915012345678" className="info-link">
-                  +49 150 123 456 78
+                <a href="tel:+491742638614" className="info-link">
+                  +49 174 263 8614
                 </a>
               </p>
             </div>
@@ -64,7 +79,7 @@ const Contact = () => {
               <span className="info-icon">⏰</span>
               <h3 className="info-title">Verfügbarkeit</h3>
               <p className="info-text">
-                Mo - Fr: 9:00 - 18:00 Uhr
+                Mo – Fr: 9:00 – 18:00 Uhr
                 <br />
                 Termine nach Vereinbarung
               </p>
@@ -74,11 +89,11 @@ const Contact = () => {
               <span className="info-icon">📍</span>
               <h3 className="info-title">Standort</h3>
               <p className="info-text">
-                Offenburg, Lahr & Ortenau
+                Offenburg, Lahr &amp; Ortenau
                 <br />
                 Baden-Württemberg
                 <br />
-                Remote & vor Ort
+                Remote &amp; vor Ort
               </p>
             </div>
 
@@ -90,7 +105,7 @@ const Contact = () => {
                 <br />
                 Oberkirch, Gengenbach,
                 <br />
-                gesamter Ortenaukreis &
+                gesamter Ortenaukreis &amp;
                 <br />
                 Baden-Württemberg
               </p>
@@ -99,9 +114,7 @@ const Contact = () => {
 
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
-              <label htmlFor="name" className="form-label">
-                Name *
-              </label>
+              <label htmlFor="name" className="form-label">Name *</label>
               <input
                 type="text"
                 id="name"
@@ -115,9 +128,7 @@ const Contact = () => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="email" className="form-label">
-                E-Mail *
-              </label>
+              <label htmlFor="email" className="form-label">E-Mail *</label>
               <input
                 type="email"
                 id="email"
@@ -131,9 +142,7 @@ const Contact = () => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="subject" className="form-label">
-                Betreff *
-              </label>
+              <label htmlFor="subject" className="form-label">Betreff *</label>
               <input
                 type="text"
                 id="subject"
@@ -147,9 +156,7 @@ const Contact = () => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="message" className="form-label">
-                Nachricht *
-              </label>
+              <label htmlFor="message" className="form-label">Nachricht *</label>
               <textarea
                 id="message"
                 name="message"
@@ -161,9 +168,25 @@ const Contact = () => {
               />
             </div>
 
-            <button type="submit" className="form-button">
-              Nachricht senden
+            <button
+              type="submit"
+              className="form-button"
+              disabled={status === "sending"}
+            >
+              {status === "sending" ? "Wird gesendet…" : "Nachricht senden"}
             </button>
+
+            {status === "success" && (
+              <p className="form-success">
+                ✅ Vielen Dank! Deine Nachricht wurde gesendet. Ich melde mich schnellstmöglich.
+              </p>
+            )}
+            {status === "error" && (
+              <p className="form-error">
+                ❌ Fehler beim Senden. Bitte schreib direkt an{" "}
+                <a href="mailto:kontakt@technik-lanz.de">kontakt@technik-lanz.de</a>.
+              </p>
+            )}
           </form>
         </div>
 
@@ -171,31 +194,13 @@ const Contact = () => {
           <h3 className="social-title">Folge mir</h3>
           <div className="social-links">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/LanzDesign"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
               title="GitHub"
             >
               <span>💻</span>
-            </a>
-            <a
-              href="https://linkedin.com/in/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-              title="LinkedIn"
-            >
-              <span>💼</span>
-            </a>
-            <a
-              href="https://twitter.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-              title="Twitter"
-            >
-              <span>🐦</span>
             </a>
             <a
               href="mailto:kontakt@technik-lanz.de"

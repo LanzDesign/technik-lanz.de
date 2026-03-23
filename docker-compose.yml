@@ -1,0 +1,13 @@
+services:
+  technik-lanz:
+    build: .
+    container_name: technik-lanz
+    restart: unless-stopped
+    ports:
+      - "3002:80"
+    networks:
+      - proxy-net
+
+networks:
+  proxy-net:
+    external: true

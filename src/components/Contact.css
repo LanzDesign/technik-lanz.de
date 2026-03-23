@@ -448,3 +448,33 @@
     padding: 25px 20px;
   }
 }
+
+.form-success {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: rgba(0, 200, 100, 0.1);
+  border: 1px solid rgba(0, 200, 100, 0.4);
+  border-radius: 8px;
+  color: #00c864;
+  font-size: 0.95rem;
+}
+
+.form-error {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 60, 60, 0.1);
+  border: 1px solid rgba(255, 60, 60, 0.4);
+  border-radius: 8px;
+  color: #ff3c3c;
+  font-size: 0.95rem;
+}
+
+.form-error a {
+  color: #ff3c3c;
+  text-decoration: underline;
+}
+
+.form-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
