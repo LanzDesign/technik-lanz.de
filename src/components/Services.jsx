@@ -1,5 +1,6 @@
 import React from "react";
 import "./Services.css";
+import ScrollReveal from "./ScrollReveal";
 
 const Services = () => {
   const services = [
@@ -131,49 +132,57 @@ const Services = () => {
   return (
     <section className="services-section" id="leistungen">
       <div className="services-container">
-        <div className="services-header">
-          <h2 className="services-title">Meine Leistungen</h2>
-          <p className="services-subtitle">
-            Von der ersten Idee bis zum fertigen Produkt – ich biete dir
-            umfassende Webentwicklungs-Dienstleistungen aus einer Hand.
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="services-header">
+            <h2 className="services-title">Meine Leistungen</h2>
+            <p className="services-subtitle">
+              Von der ersten Idee bis zum fertigen Produkt – ich biete dir
+              umfassende Webentwicklungs-Dienstleistungen aus einer Hand.
+            </p>
+          </div>
+        </ScrollReveal>
 
         <div className="services-grid">
-          {services.map((service) => (
-            <div key={service.id} className="service-card">
-              <span className="service-icon">{service.icon}</span>
-              <h3 className="service-name">{service.name}</h3>
-              <p className="service-description">{service.description}</p>
+          {services.map((service, index) => (
+            <ScrollReveal key={service.id} delay={index * 0.08}>
+              <div className="service-card">
+                <span className="service-icon">{service.icon}</span>
+                <h3 className="service-name">{service.name}</h3>
+                <p className="service-description">{service.description}</p>
 
-              <ul className="service-features">
-                {service.features.map((feature, index) => (
-                  <li key={index}>{feature}</li>
-                ))}
-              </ul>
+                <ul className="service-features">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx}>{feature}</li>
+                  ))}
+                </ul>
 
-              <div className="service-price">{service.price}</div>
+                <div className="service-price">{service.price}</div>
 
-              <a href={service.link} className="service-link">
-                <span>Mehr erfahren</span>
-                <span>→</span>
-              </a>
-            </div>
+                <a href={service.link} className="service-link">
+                  <span>Mehr erfahren</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
 
-        <div className="process-section">
-          <h3 className="process-title">So arbeite ich</h3>
-          <div className="process-steps">
-            {processSteps.map((step) => (
-              <div key={step.number} className="process-step">
-                <div className="step-number">{step.number}</div>
-                <h4 className="step-title">{step.title}</h4>
-                <p className="step-description">{step.description}</p>
-              </div>
-            ))}
+        <ScrollReveal>
+          <div className="process-section">
+            <h3 className="process-title">So arbeite ich</h3>
+            <div className="process-steps">
+              {processSteps.map((step, index) => (
+                <ScrollReveal key={step.number} delay={index * 0.1}>
+                  <div className="process-step">
+                    <div className="step-number">{step.number}</div>
+                    <h4 className="step-title">{step.title}</h4>
+                    <p className="step-description">{step.description}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./FAQ.css";
+import ScrollReveal from "./ScrollReveal";
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -64,45 +65,50 @@ const FAQ = () => {
   return (
     <section className="faq-section" id="faq">
       <div className="faq-container">
-        <div className="faq-header">
-          <h2 className="faq-title">Häufig gestellte Fragen</h2>
-          <p className="faq-subtitle">
-            Finde schnell Antworten auf die wichtigsten Fragen zur
-            Webentwicklung
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="faq-header">
+            <h2 className="faq-title">Häufig gestellte Fragen</h2>
+            <p className="faq-subtitle">
+              Finde schnell Antworten auf die wichtigsten Fragen zur
+              Webentwicklung
+            </p>
+          </div>
+        </ScrollReveal>
 
         <div className="faq-grid">
           {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className={`faq-item ${openIndex === index ? "active" : ""}`}
-            >
-              <button
-                className="faq-question"
-                onClick={() => toggleFAQ(index)}
-                aria-expanded={openIndex === index}
-              >
-                <span>{faq.question}</span>
-                <span className="faq-icon">
-                  {openIndex === index ? "−" : "+"}
-                </span>
-              </button>
+            <ScrollReveal key={index} delay={index * 0.05}>
               <div
-                className={`faq-answer ${openIndex === index ? "open" : ""}`}
+                className={`faq-item ${openIndex === index ? "active" : ""}`}
               >
-                <p>{faq.answer}</p>
+                <button
+                  className="faq-question"
+                  onClick={() => toggleFAQ(index)}
+                  aria-expanded={openIndex === index}
+                >
+                  <span>{faq.question}</span>
+                  <span className="faq-icon">
+                    {openIndex === index ? "−" : "+"}
+                  </span>
+                </button>
+                <div
+                  className={`faq-answer ${openIndex === index ? "open" : ""}`}
+                >
+                  <p>{faq.answer}</p>
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 
-        <div className="faq-cta">
-          <p>Deine Frage ist nicht dabei?</p>
-          <a href="#kontakt" className="faq-cta-btn">
-            Jetzt persönlich beraten lassen
-          </a>
-        </div>
+        <ScrollReveal>
+          <div className="faq-cta">
+            <p>Deine Frage ist nicht dabei?</p>
+            <a href="#kontakt" className="faq-cta-btn">
+              Jetzt persönlich beraten lassen
+            </a>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

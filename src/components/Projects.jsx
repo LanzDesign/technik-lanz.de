@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Projects.css";
+import ScrollReveal from "./ScrollReveal";
 
 const Projects = () => {
   const [filter, setFilter] = useState("all");
@@ -24,7 +25,7 @@ const Projects = () => {
         "Dokumenten-Upload & Verwaltung",
         "Individuelle Anpassungsmöglichkeiten",
         "Responsive Dashboard",
-        "🔜 Digitale Unterschriften-Funktion",
+        "Digitale Unterschriften-Funktion (geplant)",
       ],
       githubUrl: "#",
       demoUrl: "#",
@@ -111,189 +112,188 @@ const Projects = () => {
   return (
     <section className="projects-section" id="projekte">
       <div className="projects-container">
-        <div className="projects-header">
-          <h2 className="projects-title">Meine Projekte</h2>
-          <p className="projects-subtitle">
-            Von Fullstack-Anwendungen bis zu modernen Websites – hier findest du
-            eine Auswahl meiner realisierten Projekte.
-          </p>
-        </div>
-
-        {/* Filter Buttons */}
-        <div className="project-filters">
-          <button
-            className={`filter-btn ${filter === "all" ? "active" : ""}`}
-            onClick={() => setFilter("all")}
-          >
-            Alle Projekte
-          </button>
-          <button
-            className={`filter-btn ${filter === "fullstack" ? "active" : ""}`}
-            onClick={() => setFilter("fullstack")}
-          >
-            Fullstack
-          </button>
-          <button
-            className={`filter-btn ${filter === "web" ? "active" : ""}`}
-            onClick={() => setFilter("web")}
-          >
-            Websites
-          </button>
-        </div>
-
-        {/* Featured Project - Hero */}
-        {featuredProject && filter === "all" && (
-          <div className="featured-project">
-            <div className="featured-content">
-              <span className="featured-badge">🌟 Highlight-Projekt</span>
-              <h3 className="featured-title">{featuredProject.name}</h3>
-              <p className="featured-description">
-                {featuredProject.longDescription}
-              </p>
-
-              <div className="featured-features">
-                <h4>Funktionen & Features:</h4>
-                <ul>
-                  {featuredProject.features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="featured-tech">
-                {featuredProject.technologies.map((tech, index) => (
-                  <span key={index} className="tech-tag-large">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              <div className="featured-actions">
-                <a
-                  href={featuredProject.demoUrl}
-                  className="featured-btn primary"
-                >
-                  <span>Demo ansehen</span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path
-                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"
-                      strokeWidth="2"
-                    />
-                  </svg>
-                </a>
-                <a href="#kontakt" className="featured-btn secondary">
-                  Mehr erfahren
-                </a>
-              </div>
-            </div>
-
-            <div className="featured-image">
-              <img
-                src={featuredProject.image}
-                alt={featuredProject.name}
-                className="featured-project-image"
-              />
-              <div className="featured-overlay">
-                <span className="status-badge status-live">
-                  {featuredProject.status === "live"
-                    ? "🟢 Produktiv"
-                    : "🟡 In Entwicklung"}
-                </span>
-              </div>
-            </div>
+        <ScrollReveal>
+          <div className="projects-header">
+            <h2 className="projects-title">Meine Projekte</h2>
+            <p className="projects-subtitle">
+              Von Fullstack-Anwendungen bis zu modernen Websites – hier findest du
+              eine Auswahl meiner realisierten Projekte.
+            </p>
           </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.1}>
+          <div className="project-filters">
+            <button
+              className={`filter-btn ${filter === "all" ? "active" : ""}`}
+              onClick={() => setFilter("all")}
+            >
+              Alle Projekte
+            </button>
+            <button
+              className={`filter-btn ${filter === "fullstack" ? "active" : ""}`}
+              onClick={() => setFilter("fullstack")}
+            >
+              Fullstack
+            </button>
+            <button
+              className={`filter-btn ${filter === "web" ? "active" : ""}`}
+              onClick={() => setFilter("web")}
+            >
+              Websites
+            </button>
+          </div>
+        </ScrollReveal>
+
+        {featuredProject && filter === "all" && (
+          <ScrollReveal delay={0.2}>
+            <div className="featured-project">
+              <div className="featured-content">
+                <span className="featured-badge">Highlight-Projekt</span>
+                <h3 className="featured-title">{featuredProject.name}</h3>
+                <p className="featured-description">
+                  {featuredProject.longDescription}
+                </p>
+
+                <div className="featured-features">
+                  <h4>Funktionen & Features</h4>
+                  <ul>
+                    {featuredProject.features.map((feature, index) => (
+                      <li key={index}>{feature}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="featured-tech">
+                  {featuredProject.technologies.map((tech, index) => (
+                    <span key={index} className="tech-tag-large">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="featured-actions">
+                  <a
+                    href={featuredProject.demoUrl}
+                    className="featured-btn primary"
+                  >
+                    <span>Demo ansehen</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"
+                        strokeWidth="2"
+                      />
+                    </svg>
+                  </a>
+                  <a href="#kontakt" className="featured-btn secondary">
+                    Mehr erfahren
+                  </a>
+                </div>
+              </div>
+
+              <div className="featured-image">
+                <img
+                  src={featuredProject.image}
+                  alt={featuredProject.name}
+                  className="featured-project-image"
+                />
+                <div className="featured-overlay">
+                  <span className="status-badge status-live">
+                    {featuredProject.status === "live"
+                      ? "Produktiv"
+                      : "In Entwicklung"}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
         )}
 
-        {/* Projects Grid */}
         <div className="projects-grid">
           {filteredProjects
             .filter((p) => !p.featured || filter !== "all")
-            .map((project) => (
-              <div key={project.id} className="project-card">
-                <div className="project-preview">
-                  <img
-                    src={project.image}
-                    alt={project.name}
-                    className="project-image"
-                  />
+            .map((project, index) => (
+              <ScrollReveal key={project.id} delay={index * 0.1}>
+                <div className="project-card">
+                  <div className="project-preview">
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      className="project-image"
+                    />
 
-                  <div className="project-overlay">
-                    <div className="project-tech-tags">
-                      {project.technologies.slice(0, 3).map((tech, index) => (
-                        <span key={index} className="tech-tag">
-                          {tech}
-                        </span>
-                      ))}
+                    <div className="project-overlay">
+                      <div className="project-tech-tags">
+                        {project.technologies.slice(0, 3).map((tech, idx) => (
+                          <span key={idx} className="tech-tag">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="project-content">
+                    <div className="project-category">
+                      {project.category === "fullstack"
+                        ? "Fullstack Application"
+                        : "Website Development"}
+                    </div>
+                    <h3 className="project-name">{project.name}</h3>
+
+                    <span
+                      className={`project-status ${
+                        project.status === "live"
+                          ? "status-live"
+                          : "status-development"
+                      }`}
+                    >
+                      {project.status === "live"
+                        ? "Live"
+                        : "In Entwicklung"}
+                    </span>
+
+                    <p className="project-description">{project.description}</p>
+
+                    {project.features && (
+                      <ul className="project-features-list">
+                        {project.features.slice(0, 3).map((feature, idx) => (
+                          <li key={idx}>{feature}</li>
+                        ))}
+                      </ul>
+                    )}
+
+                    <div className="project-links">
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="project-link primary"
+                        >
+                          <span>Ansehen</span>
+                        </a>
+                      )}
+
+                      <a href="#kontakt" className="project-link">
+                        <span>Details</span>
+                      </a>
                     </div>
                   </div>
                 </div>
-
-                <div className="project-content">
-                  <div className="project-category">
-                    {project.category === "fullstack"
-                      ? "Fullstack Application"
-                      : "Website Development"}
-                  </div>
-                  <h3 className="project-name">{project.name}</h3>
-
-                  <span
-                    className={`project-status ${
-                      project.status === "live"
-                        ? "status-live"
-                        : "status-development"
-                    }`}
-                  >
-                    {project.status === "live"
-                      ? "🟢 Live"
-                      : "🟡 In Entwicklung"}
-                  </span>
-
-                  <p className="project-description">{project.description}</p>
-
-                  {project.features && (
-                    <ul className="project-features-list">
-                      {project.features.slice(0, 3).map((feature, index) => (
-                        <li key={index}>✓ {feature}</li>
-                      ))}
-                    </ul>
-                  )}
-
-                  <div className="project-links">
-                    {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="project-link primary"
-                      >
-                        <span>Ansehen</span>
-                        <svg
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                        >
-                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
-                        </svg>
-                      </a>
-                    )}
-
-                    <a href="#kontakt" className="project-link">
-                      <span>Details</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
+              </ScrollReveal>
             ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="projects-cta">
-          <h3>Interessiert an einem ähnlichen Projekt?</h3>
-          <p>Lass uns gemeinsam deine Idee in die Realität umsetzen!</p>
-          <a href="#kontakt" className="cta-btn">
-            Jetzt Projekt anfragen
-          </a>
-        </div>
+        <ScrollReveal>
+          <div className="projects-cta">
+            <h3>Interessiert an einem ähnlichen Projekt?</h3>
+            <p>Lass uns gemeinsam deine Idee in die Realität umsetzen!</p>
+            <a href="#kontakt" className="cta-btn">
+              Jetzt Projekt anfragen
+            </a>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

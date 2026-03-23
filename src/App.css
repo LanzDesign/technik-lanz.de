@@ -1,58 +1,31 @@
 /* Global App Styles */
 .App {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.95) 0%,
-    rgba(10, 14, 39, 0.98) 50%,
-    rgba(0, 0, 0, 0.95) 100%
-  );
+  background: var(--background-color);
   overflow-x: hidden;
   width: 100%;
   max-width: 100vw;
 }
 
 .main-content {
-  min-height: 100vh;
+  flex: 1;
   overflow-x: hidden;
   width: 100%;
 }
 
-/* Grundlegendes Layout für die gesamte Anwendung */
-.App {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background: url("./assets/hero-picture.png");
-  background-position: center;
-}
+/* ======================================
+   FOOTER
+   ====================================== */
 
-.footer-grid {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.circle-div {
-  display: none;
-}
-
-.circle {
-  width: 4px;
-  height: 4px;
-  background: rgba(0, 212, 255, 0.5);
-  border-radius: 50%;
-}
-
-/* Fußzeile */
 .footer {
   background: linear-gradient(
     180deg,
-    rgba(5, 10, 31, 0.95) 0%,
-    rgba(10, 14, 39, 0.98) 100%
+    var(--secondary-color) 0%,
+    #020510 100%
   );
-  border-top: 1px solid rgba(0, 212, 255, 0.2);
+  border-top: 1px solid var(--border-subtle);
   padding: 60px 40px 30px;
   position: relative;
   overflow: hidden;
@@ -67,7 +40,7 @@
   bottom: 0;
   background: radial-gradient(
     circle at 50% 0%,
-    rgba(0, 212, 255, 0.08) 0%,
+    rgba(0, 140, 255, 0.06) 0%,
     transparent 50%
   );
   pointer-events: none;
@@ -87,66 +60,68 @@
   margin-bottom: 50px;
 }
 
-/* Footer Brand Section */
+/* Footer Brand */
 .footer-brand {
   max-width: 400px;
 }
 
 .footer-logo {
-  width: 50px;
-  margin-bottom: 20px;
-  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
+  width: 40px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 8px rgba(0, 140, 255, 0.4));
 }
 
 .footer-brand h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: var(--text-white);
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
 }
 
 .footer-brand p {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-muted);
   line-height: 1.8;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
 }
 
 .footer-social {
   display: flex;
-  gap: 15px;
+  gap: 12px;
 }
 
 .footer-social-link {
-  width: 45px;
-  height: 45px;
-  background: linear-gradient(
-    145deg,
-    rgba(0, 212, 255, 0.1) 0%,
-    rgba(0, 153, 255, 0.05) 100%
-  );
-  border: 1px solid rgba(0, 212, 255, 0.3);
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   text-decoration: none;
   transition: all 0.3s ease;
+  color: var(--text-muted);
 }
 
 .footer-social-link:hover {
   background: var(--accent-color);
   border-color: var(--accent-color);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px var(--accent-glow);
+  color: #ffffff;
 }
 
-/* Footer Links Sections */
+/* Footer Sections */
 .footer-section h4 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--text-white);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   position: relative;
   display: inline-block;
 }
@@ -154,11 +129,12 @@
 .footer-section h4::after {
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: -6px;
   left: 0;
-  width: 40px;
+  width: 30px;
   height: 2px;
   background: var(--accent-color);
+  border-radius: 1px;
 }
 
 .footer-links {
@@ -168,75 +144,62 @@
 }
 
 .footer-links li {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .footer-links a {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-muted);
   text-decoration: none;
   transition: all 0.3s ease;
   display: inline-block;
-  position: relative;
-}
-
-.footer-links a::before {
-  content: "→";
-  position: absolute;
-  left: -20px;
-  opacity: 0;
-  color: var(--accent-color);
-  transition: all 0.3s ease;
-}
-
-.footer-links a:hover::before {
-  left: -15px;
-  opacity: 1;
+  font-size: 0.95rem;
 }
 
 .footer-links a:hover {
-  color: var(--accent-color);
-  padding-left: 15px;
+  color: var(--accent-light);
+  transform: translateX(4px);
 }
 
-/* Footer Contact Section */
+/* Footer Contact */
 .footer-contact {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
 .footer-contact-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  color: rgba(255, 255, 255, 0.7);
+  gap: 10px;
+  color: var(--text-muted);
   transition: all 0.3s ease;
+  font-size: 0.9rem;
 }
 
 .footer-contact-item:hover {
-  color: var(--accent-color);
-  padding-left: 5px;
+  color: var(--accent-light);
 }
 
 .contact-icon {
-  font-size: 1.3rem;
-  filter: drop-shadow(0 0 5px rgba(0, 212, 255, 0.3));
+  font-size: 1rem;
+  color: var(--accent-color);
+  flex-shrink: 0;
 }
 
 .footer-contact-item a {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-muted);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .footer-contact-item a:hover {
-  color: var(--accent-color);
+  color: var(--accent-light);
 }
 
 /* Footer Bottom */
 .footer-bottom {
-  padding-top: 30px;
-  border-top: 1px solid rgba(0, 212, 255, 0.1);
+  padding-top: 25px;
+  border-top: 1px solid var(--border-subtle);
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
@@ -244,74 +207,71 @@
 }
 
 .footer-bottom p {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.4);
   margin: 0;
   text-align: left;
-}
-
-.scroll-to-top-btn {
-  justify-self: center;
+  font-size: 0.85rem;
 }
 
 .footer-grid {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   justify-content: flex-end;
 }
 
-/* Scroll to Top Button - Optimized */
+.circle-div {
+  display: none;
+}
+
+.circle {
+  width: 4px;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 50%;
+}
+
+/* Scroll to Top */
 .scroll-to-top-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 12px 28px;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 212, 255, 0.1),
-    rgba(0, 153, 255, 0.05)
-  );
-  border: 2px solid rgba(0, 212, 255, 0.3);
-  border-radius: 30px;
-  color: var(--text-white);
-  font-weight: 600;
-  font-size: 0.95rem;
+  gap: 8px;
+  padding: 10px 22px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.85rem;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
   backdrop-filter: blur(10px);
-  margin: 0;
   white-space: nowrap;
+  font-family: inherit;
 }
 
 .scroll-to-top-btn:hover {
-  background: linear-gradient(135deg, #00d4ff, #0099ff);
+  background: var(--accent-color);
   border-color: var(--accent-color);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.5);
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px var(--accent-glow);
 }
 
 .scroll-icon {
-  font-size: 1.3rem;
+  font-size: 1rem;
   transition: transform 0.3s ease;
 }
 
 .scroll-to-top-btn:hover .scroll-icon {
-  transform: translateY(-3px);
-  animation: bounce 0.6s ease infinite;
+  transform: translateY(-2px);
 }
 
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
+/* ======================================
+   RESPONSIVE FOOTER
+   ====================================== */
 
-/* Responsive */
 @media (max-width: 1024px) {
   .footer-content {
     grid-template-columns: 1fr 1fr;
@@ -326,7 +286,7 @@
 
   .footer-content {
     grid-template-columns: 1fr;
-    gap: 35px;
+    gap: 30px;
   }
 
   .footer-brand {
@@ -337,7 +297,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 20px;
+    gap: 15px;
   }
 
   .footer-bottom p {
@@ -346,22 +306,10 @@
 
   .scroll-to-top-btn {
     width: 100%;
-    max-width: 250px;
+    max-width: 200px;
   }
 
   .footer-grid {
     justify-content: center;
-  }
-
-  .footer-contact {
-    gap: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer-social-link {
-    width: 40px;
-    height: 40px;
-    font-size: 1.1rem;
   }
 }
