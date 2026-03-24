@@ -53,8 +53,8 @@ function App() {
               />
               <h3>Technik-Lanz</h3>
               <p>
-                Moderne Webentwicklung mit React, Django und den neuesten
-                Technologien. Dein Partner für professionelle digitale Lösungen.
+                Professionelles Webdesign & Webentwicklung in Offenburg, Lahr und der Ortenau.
+                Website erstellen lassen mit React, Django und modernsten Technologien.
               </p>
               <div className="footer-social">
                 <a
@@ -67,7 +67,7 @@ function App() {
                   <FaGithub />
                 </a>
                 <a
-                  href="https://linkedin.com/in/yourusername"
+                  href="https://linkedin.com/in/daniel-lanz"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="footer-social-link"
@@ -170,7 +170,7 @@ function App() {
                 </div>
                 <div className="footer-contact-item">
                   <span className="contact-icon">📍</span>
-                  <span>Deutschland</span>
+                  <span>Offenburg, Lahr & Ortenau</span>
                 </div>
                 <div className="footer-contact-item">
                   <span className="contact-icon">⏰</span>
@@ -182,7 +182,7 @@ function App() {
 
           <div className="footer-bottom">
             <p>
-              &copy; {new Date().getFullYear()} Technik‑Lanz – Webentwickler
+              &copy; {new Date().getFullYear()} Technik‑Lanz – Webdesign & Webentwicklung Offenburg
             </p>
 
             <button className="scroll-to-top-btn" onClick={scrollToTop}>

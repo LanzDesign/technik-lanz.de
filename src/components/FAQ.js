@@ -6,7 +6,7 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "Was kostet eine professionelle Website?",
+      question: "Was kostet eine professionelle Website erstellen lassen?",
       answer:
         "Die Kosten variieren je nach Umfang und Anforderungen. Eine einfache Website startet ab 1.500€, während umfangreichere Projekte mit CMS und individuellen Features ab 3.500€ beginnen. Ich erstelle dir gerne ein individuelles Angebot nach einem kostenlosen Erstgespräch.",
     },
@@ -26,9 +26,9 @@ const FAQ = () => {
         "Ja, ich biete umfassende Wartungs- und Support-Pakete ab 150€/Monat an. Diese umfassen regelmäßige Updates, Backups, Security-Patches, Performance-Optimierung und technischen Support bei Problemen.",
     },
     {
-      question: "Wo bist du tätig?",
+      question: "Wo bist du als Webdesigner und Webentwickler tätig?",
       answer:
-        "Ich bin hauptsächlich in Offenburg, Lahr und der Ortenau tätig. Aber ich arbeite auch remote für Kunden in ganz Deutschland und darüber hinaus. Persönliche Treffen sind in der Region möglich.",
+        "Ich bin hauptsächlich in Offenburg, Lahr, Kehl, Achern, Oberkirch, Gengenbach und der gesamten Ortenau tätig. Persönliche Treffen sind in der Region möglich. Ich arbeite auch remote für Kunden in ganz Deutschland und darüber hinaus.",
     },
     {
       question: "Kann ich meine Website selbst bearbeiten?",
@@ -67,8 +67,8 @@ const FAQ = () => {
         <div className="faq-header">
           <h2 className="faq-title">Häufig gestellte Fragen</h2>
           <p className="faq-subtitle">
-            Finde schnell Antworten auf die wichtigsten Fragen zur
-            Webentwicklung
+            Finde schnell Antworten auf die wichtigsten Fragen zu Webdesign
+            und Webentwicklung in Offenburg, Lahr & der Ortenau
           </p>
         </div>
 

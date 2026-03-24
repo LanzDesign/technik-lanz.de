@@ -115,7 +115,8 @@ const Projects = () => {
           <h2 className="projects-title">Meine Projekte</h2>
           <p className="projects-subtitle">
             Von Fullstack-Anwendungen bis zu modernen Websites – hier findest du
-            eine Auswahl meiner realisierten Projekte.
+            eine Auswahl meiner realisierten Webdesign- und Webentwicklungs-Projekte
+            aus Offenburg, Lahr und der Ortenau.
           </p>
         </div>
 

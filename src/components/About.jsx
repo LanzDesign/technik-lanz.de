@@ -46,7 +46,7 @@ const About = () => {
           <div className="about-image-wrapper">
             <img
               src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80"
-              alt="Workspace"
+              alt="Webentwickler Arbeitsplatz in Offenburg - Daniel Lanz Technik-Lanz"
               className="about-image"
             />
           </div>
@@ -58,10 +58,10 @@ const About = () => {
             </p>
 
             <p className="about-description">
-              Hallo! Ich bin Daniel Lanz, ein leidenschaftlicher Webentwickler
-              mit Fokus auf moderne Webtechnologien. Seit über 3 Jahren
-              entwickle ich maßgeschneiderte digitale Lösungen für Unternehmen
-              und Privatpersonen.
+              Hallo! Ich bin Daniel Lanz, Webdesigner und Webentwickler
+              aus Offenburg. Seit über 3 Jahren entwickle ich
+              maßgeschneiderte Websites und Webanwendungen für Unternehmen
+              und Privatpersonen in Offenburg, Lahr und der gesamten Ortenau.
             </p>
 
             <p className="about-description">

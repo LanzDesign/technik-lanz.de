@@ -132,10 +132,10 @@ const Services = () => {
     <section className="services-section" id="leistungen">
       <div className="services-container">
         <div className="services-header">
-          <h2 className="services-title">Meine Leistungen</h2>
+          <h2 className="services-title">Webdesign & Webentwicklung in Offenburg, Lahr & Ortenau</h2>
           <p className="services-subtitle">
-            Von der ersten Idee bis zum fertigen Produkt – ich biete dir
-            umfassende Webentwicklungs-Dienstleistungen aus einer Hand.
+            Website erstellen lassen vom Full-Stack Entwickler – von der ersten Idee bis zum
+            fertigen Produkt. Professionelles Webdesign und Webentwicklung aus einer Hand.
           </p>
         </div>
 

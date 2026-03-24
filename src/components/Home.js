@@ -18,7 +18,7 @@ const Home = () => {
   useEffect(() => {
     // Dynamische Meta-Tags für SEO
     document.title =
-      "Webentwickler Offenburg | React & Django | Technik-Lanz";
+      "Webdesign & Webentwicklung Offenburg, Lahr & Ortenau | Technik-Lanz";
   }, []);
 
   return (
@@ -26,11 +26,11 @@ const Home = () => {
       <Helmet>
         <meta
           name="description"
-          content="Webentwicklung Offenburg ✓ React & Django ✓ Moderne Websites & Apps ✓ Full-Stack Development ✓ Jetzt anfragen!"
+          content="Professionelle Webentwicklung & Webdesign in Offenburg, Lahr & Ortenau ✓ Website erstellen lassen ✓ React & Django ✓ Homepage erstellen ✓ Full-Stack Entwickler ✓ Kostenlose Beratung"
         />
         <meta
           name="keywords"
-          content="Webentwickler Offenburg, Webentwicklung Lahr, Webdesign Ortenau, React Entwickler Offenburg, Django Entwickler Lahr"
+          content="Webdesign Offenburg, Webentwickler Offenburg, Website erstellen lassen Offenburg, Homepage erstellen Offenburg, Webentwicklung Lahr, Webdesign Lahr, Webdesign Ortenau, React Entwickler, Django Entwickler, Webseite erstellen lassen"
         />
       </Helmet>
 
@@ -74,10 +74,9 @@ const Home = () => {
           </section>
 
           <p>
-            Moderne, individuelle Webseiten – professionell entwickelt in
-            Offenburg, Lahr und der Ortenau. Flexibel betreut und zu fairen
-            Konditionen realisiert. Von der ersten Idee bis zum fertigen
-            Projekt.
+            Professionelles Webdesign und Webentwicklung in Offenburg, Lahr und der Ortenau.
+            Website erstellen lassen – modern, responsive und SEO-optimiert.
+            Von der ersten Idee bis zum fertigen Projekt, zu fairen Konditionen.
           </p>
 
           <div className="cta-buttons">

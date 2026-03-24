@@ -1,0 +1,168 @@
+/* ===== Reset & Base (from index.css) ===== */
+* {
+  scroll-behavior: smooth;
+  border-color: transparent;
+}
+
+*:focus,
+*:active {
+  outline: none !important;
+}
+
+a,
+button,
+input,
+textarea {
+  border: none;
+  outline: none;
+}
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: none !important;
+}
+
+/* ===== Root Variables & Typography (from root.css) ===== */
+:root {
+  --primary-color: #232323;
+  --secondary-color: #ff2121;
+  --accent-color: #ff2121;
+  --background-color: #323232;
+  --text-color: #333333;
+  --text-white: #ffffff;
+}
+
+::selection {
+  background-color: #ff212130;
+  color: white;
+}
+
+::-moz-selection {
+  color: white;
+  background: #ff212130;
+}
+
+@font-face {
+  font-family: 'century';
+  src: url('/fonts/centurygothic.ttf');
+}
+
+body {
+  margin: 0;
+  font-family: century;
+  background-color: var(--background-color);
+  color: var(--text-white);
+  font-size: large;
+}
+
+a {
+  color: var(--text-white);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+.glowing-btn {
+  position: relative;
+  color: var(--accent-color);
+  cursor: pointer;
+  padding: 0.35em 1em;
+  background: none;
+  perspective: 2em;
+  font-size: 2em;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  border: 0.1em solid var(--accent-color);
+  box-shadow:
+    inset 0 0 0.5em 0 var(--accent-color),
+    0 0 0.5em 0 var(--accent-color);
+  animation: border-flicker 2s linear infinite;
+  transition: color 100ms linear;
+}
+
+.glowing-txt {
+  display: inline-block;
+  margin-right: -0.8em;
+  text-shadow:
+    0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--accent-color);
+  animation: text-flicker 3s linear infinite;
+}
+
+.faulty-letter {
+  opacity: 0.5;
+  animation: faulty-flicker 1s linear infinite;
+}
+
+.glowing-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  z-index: -1;
+  background-color: var(--accent-color);
+  transition: opacity 100ms linear;
+}
+
+.glowing-btn:hover {
+  color: rgba(0, 0, 0, 0.85);
+  text-shadow: none;
+  animation: none;
+}
+.glowing-btn:hover .glowing-txt {
+  animation: none;
+}
+.glowing-btn:hover .faulty-letter {
+  animation: none;
+  text-shadow: none;
+  opacity: 1;
+}
+.glowing-btn:hover::before {
+  filter: blur(1.5em);
+  opacity: 1;
+}
+.glowing-btn:hover::after {
+  opacity: 1;
+}
+
+@keyframes faulty-flicker {
+  0%, 2% { opacity: 0.1; }
+  4%, 19% { opacity: 0.5; }
+  21% { opacity: 0.1; }
+  23% { opacity: 1; }
+  80% { opacity: 0.5; }
+  83% { opacity: 0.4; }
+  87% { opacity: 1; }
+}
+
+@keyframes text-flicker {
+  0% { opacity: 0.1; }
+  2% { opacity: 1; }
+  8% { opacity: 0.1; }
+  9% { opacity: 1; }
+  12% { opacity: 0.1; }
+  20% { opacity: 1; }
+  25% { opacity: 0.3; }
+  30% { opacity: 1; }
+  70% { opacity: 0.7; }
+  72% { opacity: 0.2; }
+  77% { opacity: 0.9; }
+  100% { opacity: 0.9; }
+}
+
+@keyframes border-flicker {
+  0% { opacity: 0.1; }
+  2% { opacity: 1; }
+  4% { opacity: 0.1; }
+  8% { opacity: 1; }
+  70% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .glowing-btn { font-size: 1.2em; letter-spacing: 0.6em; }
+}
